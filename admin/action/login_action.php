@@ -12,9 +12,11 @@
         if(($array[0]=='admin')&&$array[1]==0){
             //保存session
             $_SESSION['user_name'] = $user_name;
-            $_SESSION['user_password'] = $user_password;
             //重定向浏览器
             header("Location:../admin.php");
+        }
+        else{
+            header("Location:../login.php");
         }
     } catch (Exception $ex) {
         echo $ex->getMessage();

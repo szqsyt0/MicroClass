@@ -27,6 +27,10 @@
 <div id="body-wrapper">
   <!-- Wrapper for the radial gradient background -->
  <?php
+ session_start();
+ if(empty($_SESSION['user_name'])){
+     header("Location:./login.php");
+ }
  include 'sideBar.php';
  ?>
   <!-- End #sidebar -->
