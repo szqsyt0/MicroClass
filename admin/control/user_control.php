@@ -13,13 +13,15 @@ class UserControl
     function loginCheck($user_name,$user_password){
         $conn = DbConnect();
         //调用存储过程
-        $conn->query("set @identity");
-        $conn->query("set @err");
-        $query = "call login($user_name,$user_password,@identity,@err);";
+        $conn->query("set @username='".$user_name."'");
+        $conn->query("set @password='".$user_password."'");
+        $query = "call login(@username,@password,@identity,@err);";
         $result = $conn->query($query);
-        $return_values = $conn->query("select @identity,@err;");
+        $return_values = $conn->query("select @identity as identity,@err as error");
         $array = mysqli_fetch_array($return_values);
         return $array;
-    }            
+    }  
+    
+    
 }
 

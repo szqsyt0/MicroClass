@@ -36,7 +36,7 @@ and open the template in the editor.
               <!-- Sidebar Profile links -->
               <div id="profile-links"> 欢迎, <a href="#" title="Edit your profile">admin name</a><br />
                 <br />
-                <a href="#" title="View the Site">前往首页</a> | <a href="#" title="Sign Out">退出</a> </div>
+                <a href="#" title="View the Site">前往首页</a> | <a href="logout.php" title="Sign Out">退出</a> </div>
               <ul id="main-nav">
                 <!-- Accordion Menu -->
                 <li> <a href="#" class="nav-top-item no-submenu">
@@ -49,9 +49,6 @@ and open the template in the editor.
                 </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
                     <!-- 评论管理-->
-                </li>
-                <li> <a href="#" class="nav-top-item"> 图片管理 </a>
-
                 </li>
                 <li> <a href="#" class="nav-top-item"> 专辑管理 </a>
 

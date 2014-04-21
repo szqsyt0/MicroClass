@@ -19,6 +19,7 @@
 <script type="text/javascript" src="resources/scripts/facebox.js"></script>
 <!-- jQuery WYSIWYG Plugin -->
 <script type="text/javascript" src="resources/scripts/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="resources/support.js"></script>
 <!-- jQuery Datepicker Plugin -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
@@ -44,9 +45,9 @@
       <div class="content-box-header">
         <h3>视频列表</h3>
         <ul class="content-box-tabs">
-          <li><a href="#tab1" class="default-tab">Table</a></li>
+          <li><a href="#tab1" class="default-tab">目录</a></li>
           <!-- href must be unique and match the id of target div -->
-          <li><a href="#tab2">Forms</a></li>
+          <li><a href="#tab2">上传</a></li>
         </ul>
         <div class="clear"></div>
       </div>
@@ -113,44 +114,46 @@
             <fieldset>
             <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
             <p>
-              <label>Small form input</label>
-              <input class="text-input small-input" type="text" id="small-input" name="small-input" />
-              <span class="input-notification success png_bg">Successful message</span>
+                <label>视频名称</label>
+                <input class="text-input small-input" type="text" id="small-input" name="video_title" />
+                <span class="input-notification"/><!--添加标题要求--></span>
               <!-- Classes for input-notification: success, error, information, attention -->
-              <br />
-              <small>A small description of the field</small> </p>
+              <br />             
+              </p>
             <p>
-              <label>Medium form input</label>
-              <input class="text-input medium-input datepicker" type="text" id="medium-input" name="medium-input" />
-              <span class="input-notification error png_bg">Error message</span> </p>
+                <label>讲解教师</label>
+                <input class="text-input small-input" type="text" id="small-input" name="video_title" />
+                <span class="input-notification"/><!--添加标题要求--></span>
+              <!-- Classes for input-notification: success, error, information, attention -->
+              <br />             
+              </p>
             <p>
-              <label>Large form input</label>
-              <input class="text-input large-input" type="text" id="large-input" name="large-input" />
+                <label>选择视频</label>
+                <input type="file" name="video" />
             </p>
             <p>
-              <label>Checkboxes</label>
-              <input type="checkbox" name="checkbox1" />
-              This is a checkbox
-              <input type="checkbox" name="checkbox2" />
-              And this is another checkbox </p>
-            <p>
-              <label>Radio buttons</label>
-              <input type="radio" name="radio1" />
-              This is a radio button<br />
-              <input type="radio" name="radio2" />
-              This is another radio button </p>
-            <p>
-              <label>This is a drop down list</label>
-              <select name="dropdown" class="small-input">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-                <option value="option4">Option 4</option>
+              <label>分类</label>
+              <select name="video_type" class="small-input">
+                  <?php
+                    for($i=1;$i<4;$i++){
+                        echo '<option>'.'Option '.$i.'</option>';
+                    }
+                  ?>
               </select>
             </p>
             <p>
-              <label>Textarea with WYSIWYG</label>
-              <textarea class="text-input textarea wysiwyg" id="textarea" name="textfield" cols="79" rows="15"></textarea>
+              <label>专辑</label>
+              <select name="video_album" class="small-input">
+                  <?php
+                    for($i=1;$i<4;$i++){
+                        echo '<option>'.'Option '.$i.'</option>';
+                    }
+                  ?>
+              </select>
+            </p>
+            <p>
+              <label>视频简介</label>
+              <textarea class="text-input textarea wysiwyg" id="textarea" name="video_introduction" cols="79" rows="15"></textarea>
             </p>
             <p>
               <input class="button" type="submit" value="Submit" />

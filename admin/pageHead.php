@@ -36,12 +36,10 @@ and open the template in the editor.
             <!-- Page Head -->
             <h2>后台管理</h2>
             <p id="page-intro">欢迎进入微课网后台管理页面</p>
-            <ul class="shortcut-buttons-set">
+<!--            <ul class="shortcut-buttons-set">
               <li><a class="shortcut-button" href="#"><span> <img src="resources/images/icons/image_add_48.png" alt="icon" /><br />
-                上传图片 </span></a></li>
-              <li><a class="shortcut-button" href="#"><span> <img src="resources/images/icons/clock_48.png" alt="icon" /><br />
                 上传视频 </span></a></li>
-            </ul>
+            </ul>-->
             <!-- End .shortcut-buttons-set -->
             <div class="clear"></div>
             <!-- End .clear -->
