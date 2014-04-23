@@ -149,8 +149,7 @@ function phoneDeal(){
            else if(return_values === '1')
            {
                document.getElementById("phoneexist").style.display="inline";
-               document.getElementById("phonenotexist").style.display="none";
-               
+               document.getElementById("phonenotexist").style.display="none";              
            }
        }
 }
