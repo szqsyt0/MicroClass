@@ -5,21 +5,21 @@
 <title>MicroClass Admin</title>
 <!--                       CSS                       -->
 <!-- Reset Stylesheet -->
-<link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../resources/css/reset.css" type="text/css" media="screen" />
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../resources/css/style.css" type="text/css" media="screen" />
 <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
-<link rel="stylesheet" href="resources/css/invalid.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../resources/css/invalid.css" type="text/css" media="screen" />
 <!--                       Javascripts                       -->
 <!-- jQuery -->
-<script type="text/javascript" src="resources/scripts/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../resources/scripts/jquery-1.3.2.min.js"></script>
 <!-- jQuery Configuration -->
-<script type="text/javascript" src="resources/scripts/simpla.jquery.configuration.js"></script>
+<script type="text/javascript" src="../resources/scripts/simpla.jquery.configuration.js"></script>
 <!-- Facebox jQuery Plugin -->
-<script type="text/javascript" src="resources/scripts/facebox.js"></script>
+<script type="text/javascript" src="../resources/scripts/facebox.js"></script>
 <!-- jQuery WYSIWYG Plugin -->
-<script type="text/javascript" src="resources/scripts/jquery.wysiwyg.js"></script>
-<script type="text/javascript" src="resources/support.js"></script>
+<script type="text/javascript" src="../resources/scripts/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="../resources/support.js"></script>
 <!-- jQuery Datepicker Plugin -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
@@ -39,18 +39,18 @@
               <!-- Sidebar with logo and menu -->
               <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
               <!-- Logo (221px wide) -->
-              <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
+              <a href="#"><img id="logo" src="../resources/images/logo.png" alt="Simpla Admin logo" /></a>
               <!-- Sidebar Profile links -->
               <div id="profile-links"> 欢迎, <a href="#" title="Edit your profile"><?php echo $_SESSION['user_name'];?></a><br />
                 <br />
-                <a href="#" title="View the Site">前往首页</a> | <a href="logout.php" title="Sign Out">退出</a> </div>
+                <a href="#" title="View the Site">前往首页</a> | <a href="../logout.php" title="Sign Out">退出</a> </div>
               <ul id="main-nav">
                 <!-- Accordion Menu -->
-                <li> <a href="#" class="nav-top-item current">
+                <li> <a href="#" class="nav-top-item">
                   <!-- Add the class "current" to current menu item -->
                   视频管理 </a>
                     <ul>
-                        <li><a class="current" href="admin.php">视频列表</a></li>                       
+                        <li><a href="../admin.php">视频列表</a></li>                       
                     </ul>
                 </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
@@ -68,9 +68,9 @@
                         <li><a href="#">用户列表</a></li>                       
                     </ul> 
                 </li>
-                <li> <a href="#" class="nav-top-item"> 账号设置 </a>
+                <li> <a href="#" class="nav-top-item current"> 账号设置 </a>
                     <ul>
-                        <li><a href="./view/admin_manage.php">设置</a></li>                       
+                        <li><a class="current" href="./admin_manage.php">设置</a></li>                       
                     </ul>
                 </li>
               </ul>
@@ -90,7 +90,7 @@
             <h2>后台管理</h2>
             <p id="page-intro">欢迎进入微课网后台管理页面</p>
 <!--            <ul class="shortcut-buttons-set">
-              <li><a class="shortcut-button" href="#"><span> <img src="resources/images/icons/image_add_48.png" alt="icon" /><br />
+              <li><a class="shortcut-button" href="#"><span> <img src="../resources/images/icons/image_add_48.png" alt="icon" /><br />
                 上传视频 </span></a></li>
             </ul>-->
             <!-- End .shortcut-buttons-set -->
@@ -99,11 +99,11 @@
     <div class="content-box">
       <!-- Start Content Box -->
       <div class="content-box-header">
-        <h3>视频列表</h3>
+        <h3>管理员列表</h3>
         <ul class="content-box-tabs">
-          <li><a href="#tab1" class="default-tab">目录</a></li>
+          <li><a href="#tab1" class="default-tab">名单</a></li>
           <!-- href must be unique and match the id of target div -->
-          <li><a href="#tab2">上传</a></li>
+          <li><a href="#tab2">添加管理员</a></li>
         </ul>
         <div class="clear"></div>
       </div>
@@ -111,8 +111,8 @@
       <div class="content-box-content">
         <div class="tab-content default-tab" id="tab1">
           <!-- This is the target div. id must match the href of this div's tab -->
-          <div class="notification attention png_bg"> <a href="#" class="close"><img src="resources/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
-            <div> 这里是视频列表，你可以在这里管理视频 </div>
+          <div class="notification attention png_bg"> <a href="#" class="close"><img src="../resources/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+            <div> 这里是管理员列表，你可以在这里进行对管理员账户的相应操作 </div>
           </div>
           <table>
             <thead>
@@ -155,7 +155,7 @@
                 <td>Donec tortor diam</td>
                 <td>
                   <!-- Icons -->
-                  <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                  <a href="#" title="Edit"><img src="../resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="../resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="../resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
               </tr>
                         <?php
                     }
@@ -166,53 +166,49 @@
         </div>
         <!-- End #tab1 -->
         <div class="tab-content" id="tab2">
-          <form action="#" method="post">
+            <form action="../action/register_action.php" method="post" name="add_admin" onsubmit="return prevent_form_post();">
             <fieldset>
             <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
             <p>
-                <label>视频名称</label>
-                <input class="text-input small-input" type="text"  name="video_title" />
-                <span class="input-notification"><!--添加标题要求--></span>
+                <label>用户名</label>
+                <input class="text-input small-input" type="text" id="user_name" name="user_name" onblur="isUserExist();"/>
+                <span class="input-notification error png_bg" style="display: none" id="userexist">用户名已存在</span> 
+                <span class="input-notification success png_bg" style="display: none" id="usernotexist"></span>
               <!-- Classes for input-notification: success, error, information, attention -->
               <br />             
               </p>
-            <p>
-                <label>讲解教师</label>
-                <input class="text-input small-input" type="text"  name="video_title" />
+            <p>                
+                <label>密码</label>
+                <input  class="text-input small-input" type="password"  name="user_password" id="password"/>
                 <span class="input-notification"><!--添加标题要求--></span>
               <!-- Classes for input-notification: success, error, information, attention -->
               <br />             
-              </p>
-            <p>
-                <label>选择视频</label>
-                <input type="file" name="video" />
             </p>
             <p>
-              <label>分类</label>
-              <select name="video_type" class="small-input">
-                  <?php
-                    for($i=1;$i<4;$i++){
-                        echo '<option>'.'Option '.$i.'</option>';
-                    }
-                  ?>
-              </select>
+              <label>确认密码</label>
+              <input  class="text-input small-input" type="password"  name="user_password2" id="password1" onblur="return isPasswordEqual();"/>
+              <span class="input-notification error png_bg" style="display: none" id="errorpassword">两次输入的密码不一致</span> 
+              <span class="input-notification success png_bg" style="display: none" id="rightpassword"></span>
+            </p>
+           
+            <p>
+                <label>邮箱</label>
+                <input class="text-input small-input" type="email" id="user_email" name="user_email" onblur="isEmailExist();"/>
+                <span class="input-notification error png_bg" style="display: none" id="emailexist">该邮箱已存在</span> 
+                <span class="input-notification success png_bg" style="display: none" id="emailnotexist"></span>
+              <!-- Classes for input-notification: success, error, information, attention -->
+              <br />             
             </p>
             <p>
-              <label>专辑</label>
-              <select name="video_album" class="small-input">
-                  <?php
-                    for($i=1;$i<4;$i++){
-                        echo '<option>'.'Option '.$i.'</option>';
-                    }
-                  ?>
-              </select>
-            </p>
+                <label>手机号码</label>
+                <input class="text-input small-input" type="tel" id="user_phonenumber" name="user_phonenumber" onblur="isPhoneExist();"/>
+                <span class="input-notification error png_bg" style="display: none" id="phoneexist">该手机号码已存在</span> 
+                <span class="input-notification success png_bg" style="display: none" id="phonenotexist"></span>
+              <!-- Classes for input-notification: success, error, information, attention -->
+              <br />             
+            </p>                                             
             <p>
-              <label>视频简介</label>
-              <textarea class="text-input textarea wysiwyg" id="textarea" name="video_introduction" cols="79" rows="15"></textarea>
-            </p>
-            <p>
-              <input class="button" type="submit" value="Submit" />
+                <input class="button" type="submit" value="Submit"/>
             </p>
             </fieldset>
             <div class="clear"></div>

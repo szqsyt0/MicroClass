@@ -1,8 +1,11 @@
 <?php
 
     include '../control/user_control.php';
+    //获取登陆需要的信息
     $user_name = trim($_POST['user_name']);
     $user_password = md5(trim($_POST['user_password']));
+    
+    //实例化用户控制类
     $userControl = new UserControl();
     
     session_start();
