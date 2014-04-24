@@ -22,6 +22,13 @@ CREATE TABLE `user` (
 	`user_status` TINYINT DEFAULT 0 NOT NULL COMMENT '用户状态，0为正常，1为被禁止评论'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
+-- 扩展的用户表
+/*
+create table `user_extra` (
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+*/
+
 -- 添加默认管理员账户
 INSERT INTO `microclass`.`user` 
 ( `user_id`, `user_name`, `user_password`, `user_email`, `user_phonenumber`,
@@ -43,10 +50,8 @@ create table `album` (
 create table `category` (
 	`category_id` int UNSIGNED not null primary key auto_increment comment 
 '分类的id',
-	`parent_id` int UNSIGNED comment '父类别id',
-	`category_name` varchar(32) not null unique comment '该分类的名字,,不可重复',
-	CONSTRAINT `category_parent_id_must_exist` FOREIGN KEY (`parent_id`) 
-REFERENCES `category` (`category_id`)
+	`parent_id` int UNSIGNED not null default 0 comment '父类别id',
+	`category_name` varchar(32) not null unique comment '该分类的名字,,不可重复'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 -- 授课教师表，前期不使用
@@ -60,8 +65,7 @@ create table `teacher` (
 
 -- 视频表
 CREATE TABLE `video` (
-	`video_id` int UNSIGNED not null primary key auto_increment comment 
-'自动增长的用户ID',
+	`video_id` int UNSIGNED not null primary key auto_increment comment '自动增长的视频ID',
 	`video_title` varchar(50) not null comment '视频标题',
 	`video_path` varchar(32) not null comment '视频的相对存储路径',
 	`video_screenshot` longblob comment '视频截图(封面)，使用longblob直接存入mysql',

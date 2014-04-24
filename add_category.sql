@@ -23,7 +23,10 @@ add_category_main:begin
 		set errno = 2;
 		leave add_category_main;
 	end if;
-	
+
+	if (parent_id is null) then 
+		set parent_id=0;
+	end if;
 	insert into `category` values
 		(default,parent_id,name);
 	set errno = 0;

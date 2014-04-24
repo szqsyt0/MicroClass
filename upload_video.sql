@@ -5,7 +5,7 @@ delimiter //
  * 返回：错误代码
  * 错误代码：0成功，1上传者名字不存在
  ******************************************************************************/
-create procedure video_upload (
+create procedure upload_video (
 	in title varchar(32),
 	in path varchar(32),
 	in screenshot longblob,
@@ -15,7 +15,7 @@ create procedure video_upload (
 	in uploader varchar(32),
 	out errno int
 )
-video_upload_main:begin
+upload_video_main:begin
 	declare uploader_id int unsigned;
 	declare category_id int unsigned;
 
@@ -36,32 +36,13 @@ video_upload_main:begin
 			from `category` where `category_name` = category;
 	end if;
 
-	INSERT INTO `microclass`.`video` (
-		`video_id`,
-		`video_title`,
-		`video_path`,
-		`video_screenshot`,
-		`video_playcount`,
-		`video_rating`,
-		`video_rating_count`,
-		`video_introduction`,
-		`video_category_id`,
-		`video_uploader_id`,
-		`video_album_id`,
-		`video_teacher_id`
-		) VALUES (
-		default,
-		title,
-		path,
-		screenshot,
-		default,
-		default,
-		default,
-		info,
-		category_id,
-		uploader_id,
-		album,
-		null);
+	# 插入到`video`
+	INSERT INTO `microclass`.`video` (`video_title`, `video_path`, `video_screenshot`,
+		`video_introduction`, `video_category_id`, `upload_videoer_id`, `video_album_id`)
+	VALUES (
+		title, path, screenshot,
+		info, category_id, uploader_id, album
+	);
 
 end//##########################上传视频结束#####################################
 delimiter ; 
