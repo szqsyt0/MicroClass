@@ -15,6 +15,7 @@ function isPasswordEqual(){
     {
         document.getElementById("errorpassword").style.display="none";
         document.getElementById("rightpassword").style.display="inline";
+        document.getElementById("password2").style.display="inline";
     }
     return true;
 }
@@ -196,6 +197,11 @@ function prevent_form_post(){
         document.getElementById("user_phonenumber").focus();
         return false;
     }
+    else if($("#login_identity").attr("value")!=="sadmin"){
+        alert("权限不足！只有超级管理员才能添加管理员");
+        return false;
+    }
+    alert("添加成功!");
     return true;
 }
 

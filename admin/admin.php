@@ -41,7 +41,7 @@
               <!-- Logo (221px wide) -->
               <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
               <!-- Sidebar Profile links -->
-              <div id="profile-links"> 欢迎, <a href="#" title="Edit your profile"><?php echo $_SESSION['user_name'];?></a><br />
+              <div id="profile-links"> 欢迎,<a href="#" title="Edit your profile"><?php echo $_SESSION['user_name'];?></a><br />
                 <br />
                 <a href="#" title="View the Site">前往首页</a> | <a href="logout.php" title="Sign Out">退出</a> </div>
               <ul id="main-nav">
@@ -50,22 +50,22 @@
                   <!-- Add the class "current" to current menu item -->
                   视频管理 </a>
                     <ul>
-                        <li><a class="current" href="admin.php">视频列表</a></li>                       
+                        <li><a class="current" href="admin.php">所有视频</a></li>                       
                     </ul>
                 </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
                     <ul>
-                        <li><a href="#">评论列表</a></li>                       
+                        <li><a href="#">所有评论</a></li>                       
                     </ul>                   
                 </li>
                 <li> <a href="#" class="nav-top-item"> 专辑管理 </a>
                      <ul>
-                        <li><a href="#">专辑列表</a></li>                       
+                        <li><a href="#">所有专辑</a></li>                       
                     </ul> 
                 </li>
-                <li> <a href="#" class="nav-top-item"> 用户管理</a>
+                <li> <a href="#" class="nav-top-item"> 分类管理</a>
                      <ul>
-                        <li><a href="#">用户列表</a></li>                       
+                        <li><a href="#">所有分类</a></li>                       
                     </ul> 
                 </li>
                 <li> <a href="#" class="nav-top-item"> 账号设置 </a>

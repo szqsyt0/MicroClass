@@ -11,9 +11,10 @@
     session_start();
     try{
         $result = $userControl->loginCheck($user_name,$user_password);
-        if(($result['identity']=='admin')&&$result['error']==0){
+        if(($result['identity']=='admin'||$result['identity']=='sadmin')&&$result['error']==0){
             //保存session
             $_SESSION['user_name'] = $user_name;
+            $_SESSION['user_identity'] = $result['identity'];
             //重定向浏览器
             header("Location:../admin.php");
             die();

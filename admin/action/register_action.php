@@ -8,7 +8,7 @@
     $user_email = trim($_POST['user_email']);
     $user_phonenumber = trim($_POST['user_phonenumber']);
    
-    $user_identity = "admin";
+    $user_identity = trim($_POST['user_identity']);
     
     //实例化用户控制类
     $userControl = new UserControl();

@@ -35,6 +35,7 @@
  }
  ?>
   <div id="sidebar">
+      
             <div id="sidebar-wrapper">
               <!-- Sidebar with logo and menu -->
               <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
@@ -50,22 +51,22 @@
                   <!-- Add the class "current" to current menu item -->
                   视频管理 </a>
                     <ul>
-                        <li><a href="../admin.php">视频列表</a></li>                       
+                        <li><a href="../admin.php">所有视频</a></li>                       
                     </ul>
                 </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
                     <ul>
-                        <li><a href="#">评论列表</a></li>                       
+                        <li><a href="#">所有评论</a></li>                       
                     </ul>                   
                 </li>
                 <li> <a href="#" class="nav-top-item"> 专辑管理 </a>
                      <ul>
-                        <li><a href="#">专辑列表</a></li>                       
+                        <li><a href="#">所有专辑</a></li>                       
                     </ul> 
                 </li>
-                <li> <a href="#" class="nav-top-item"> 用户管理</a>
+                <li> <a href="#" class="nav-top-item"> 分类管理</a>
                      <ul>
-                        <li><a href="#">用户列表</a></li>                       
+                        <li><a href="#">所有分类</a></li>                       
                     </ul> 
                 </li>
                 <li> <a href="#" class="nav-top-item current"> 账号设置 </a>
@@ -166,6 +167,8 @@
         </div>
         <!-- End #tab1 -->
         <div class="tab-content" id="tab2">
+            <!--用于判断用户身份-->
+            <input style="display: none" id="login_identity" value="<?php echo $_SESSION['user_identity'];?>"/>
             <form action="../action/register_action.php" method="post" name="add_admin" onsubmit="return prevent_form_post();">
             <fieldset>
             <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
@@ -180,7 +183,7 @@
             <p>                
                 <label>密码</label>
                 <input  class="text-input small-input" type="password"  name="user_password" id="password"/>
-                <span class="input-notification"><!--添加标题要求--></span>
+                <span class="input-notification success png_bg" style="display: none" id="password2"></span>
               <!-- Classes for input-notification: success, error, information, attention -->
               <br />             
             </p>
@@ -206,7 +209,14 @@
                 <span class="input-notification success png_bg" style="display: none" id="phonenotexist"></span>
               <!-- Classes for input-notification: success, error, information, attention -->
               <br />             
-            </p>                                             
+            </p>  
+            <p>
+              <label>权限</label>
+              <select name="user_identity" id="user_identity" class="small-input">
+                  <option value="admin">普通管理员</option>
+                  <option value="sadmin">超级管理员</option>
+              </select>
+            </p>
             <p>
                 <input class="button" type="submit" value="Submit"/>
             </p>
