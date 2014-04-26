@@ -13,6 +13,8 @@ create procedure `add_comment` (
 	out errno int
 )
 add_comment_main:begin
+
+
 INSERT INTO `microclass`.`comment`
 (`parent_id`,
 `video_id`,

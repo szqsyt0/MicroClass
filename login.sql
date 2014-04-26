@@ -2,18 +2,19 @@ delimiter //
 /***************************************************************
  * 登录的存储过程
  * 接收: 邮箱或用户名，与md5加密的密码
- * 输出：身份，错误代码
+ * 输出：id，身份，错误代码
  * 错误代码：0为验证成功，1为密码错误，2为无该用户
  ***************************************************************/
 create procedure login (
 	in username varchar(20),
 	in password char(32), 
+	out id int unsigned,
 	out identity varchar(6), 
 	out errno int
 )
 login_main: begin
 	DECLARE true_password char(32); -- 提取真正的密码用于与接受的密码比较
-	declare id int unsigned; -- 提高update速度,检测用户名是否存在
+	set id=0;
 
 	if (select locate('@',username) > 0) then -- 若含有'@'字符则认定用户名为email
 		select `user_password`,`user_identity`, `user_id`
