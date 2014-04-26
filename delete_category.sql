@@ -1,20 +1,20 @@
 /*******************************************************************************
  * 删除单个分类,将删除所选分类的所有子分类
- * 输入：分类名
+ * 输入：分类id
  * 输出：错误代码
- * 错误代码：0正确，1名字不存在
+ * 错误代码：0正确，1分类id不存在
  ******************************************************************************/
 delimiter //
 create procedure `delete_category` (
-	in name varchar(32),
+	in id int unsigned,
 	out errno int
 )
 delete_category_main:begin
-	declare id int unsigned;
+	declare eid int unsigned;
 
-	select `category_id` into id 
-		from `category` where `category_name` = name;
-	if (id is null) then
+	select `category_id` into eid 
+		from `category` where `category_id` = id;
+	if (eid is null) then
 		set errno=1;
 		leave delete_category_main;
 	end if;

@@ -1,29 +1,29 @@
 /*******************************************************************************
  * 修改分类信息
- * 输入：分类名，新分类名，新父分类名
+ * 输入：分类id，新分类名，新父分类名
  * 输出：错误代码
  * 错误代码：0成功，1分类名不存在，2父分类名不存在
  ******************************************************************************/
 delimiter //
 create procedure change_category (
-	in name varchar(32),
+	in id int unsigned,
 	in newname varchar(32),
 	in parentname varchar(32),
 	out errno int
 )
 change_category_main:begin
-	declare id int unsigned;
+	declare eid int unsigned;
 	declare pid int unsigned;
 
 	# 分类名不存在
-	select `category_id` into id from `category` where `category_name`=name;
-	if (id is null) then
+	select `category_id` into eid from `category` where `category_id`=id;
+	if (eid is null) then
 		set errno = 1;
 		leave change_category_main;
 	end if;
 
 	# 父分类名不存在
-	select `category_id` into pid from `category` where `category_name`=newname;
+	select `category_id` into pid from `category` where `category_name`=parentname;
 	if (pid is null) then
 		set errno = 2;
 		leave change_category_main;
