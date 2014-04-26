@@ -9,7 +9,7 @@ create procedure `delete_user` (
 	out errno int
 )
 delete_user_main:begin
-	declare id int unsigned;
+	declare eid int unsigned;
 	select `user_id` into eid from `user` where `user_id`=id;
 	if (eid is null) then 
 		set errno = 1;
@@ -17,5 +17,5 @@ delete_user_main:begin
 	end if;
 	delete from `user` where id = `eid`;
 	set errno = 0;
-end
+end//
 delimiter ;
