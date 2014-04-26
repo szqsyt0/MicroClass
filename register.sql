@@ -6,11 +6,11 @@ delimiter //
  * 错误代码：0注册成功，1用户名已存在，2邮箱已存在，3手机号已存在
  **********************************************************/
 create procedure register (
-	in name varchar(20), -- 用户名
+	in name varchar(32), -- 用户名
 	in password char(32),    -- 密码,固定为32个字符的MD5码
-	in email varchar(20),    -- 邮箱
+	in email varchar(32),    -- 邮箱
 	in phone varchar(11),    -- 手机号，暂时用varchar
-	in identity varchar(5),  -- 身份，若为admin则是添加管理员
+	in identity varchar(6),  -- 身份，若为admin则是添加管理员
 	out errno int            -- 返回的错误代码
 )
 register_main: begin
