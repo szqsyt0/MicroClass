@@ -6,13 +6,23 @@
 delimiter //
 create procedure get_user_info (
 	in id int unsigned,
-	out @err int
+	out errno int
 )
 get_user_info_main:begin
 	declare eid int unsigned;
 
-	select `user_id`, `user_name`, `user_email`, `user_phonenunber`, `user_lastlogin`
-		, `user_status`
-		from `user` where 
+	select `user_id` into eid from `user` where `user_id` = id;
+	if (eid is null) then
+		set errno = 1;
+		leave get_user_info_main;
+	end if;
+	select * from (
+		select `user_id` as `id`,`user_name`,`user_email`,`user_phonenumber`
+			,`user_lastlogin`,`user_status` 
+			from `user` where `user_id` = id
+	) s1 left join (
+		select * from `user_extra` where `user_id` = id
+	) s2 on s1.`id`=s2.`user_id`;
+	set errno = 0;
 end//
-delmiiter ;
+delimiter ;

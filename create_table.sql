@@ -23,11 +23,12 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 -- 扩展的用户表
-/*
 create table `user_extra` (
-
+	`user_id` int unsigned not null primary key comment '依赖user表中的id',
+	CONSTRAINT `user_extra_id_must_exist` FOREIGN KEY 
+(`user_id`) REFERENCES `user` (`user_id`),
+	`user_sex` char comment '性别，0男1女'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
-*/
 
 -- 添加默认管理员账户
 INSERT INTO `microclass`.`user` 
