@@ -12,25 +12,27 @@ create procedure login (
 	out errno int
 )
 login_main: begin
-	DECLARE name varchar(30); -- 用于检测用户名是否存在
 	DECLARE true_password char(32); -- 提取真正的密码用于与接受的密码比较
+	declare id int unsigned; -- 提高update速度,检测用户名是否存在
 
 	if (select locate('@',username) > 0) then -- 若含有'@'字符则认定用户名为email
-		select `user_email`,`user_password`,`user_identity` 
-			into name,true_password,identity 
+		select `user_password`,`user_identity`, `user_id`
+			into true_password,identity,id 
 			from user 
 			where `user_email`=username;
 	else				      -- 用户名登录
-		select `user_name`,`user_password`,`user_identity` 
-			into name,true_password,identity 
+		select `user_password`,`user_identity`,`user_id`
+			into true_password,identity,id 
 			from user 
 			where `user_name`=username;
 	end if;
 
-	if (length(name) is null) then -- 未找到该名字
+	if (length(id) is null) then -- 未找到该名字
 		select 2 into errno; -- no this name
 		leave login_main;
 	else if (true_password like password) then
+			update `user` set `user_lastlogin`=curdate()
+				where `user_id`=id; -- 改变登录时间
 			select 0 into errno; -- true password
 			leave login_main;
 		else
