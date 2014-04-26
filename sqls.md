@@ -10,10 +10,22 @@
 2. 密码 char(32) md5加密过的32位密码
 
 #### 输出
-1. id unsignded int 型的用户id号
-2. 身份 varchar(6) 管理员为sadmin或admin，用户为user
-3. 错误代码 0登录成功，1密码错误，2无该用户
+4. id unsignded int 型的用户id号
+5. 身份 varchar(6) 管理员为sadmin或admin，用户为user
+6. 错误代码 0登录成功，1密码错误，2无该用户
 
 =============
 ## 注册
-  
+  注册新用户，可以注册为管理员
+
+### 参数列表
+
+#### 输入
+1. 用户名 varchar(32) 唯一的用户名
+2. 密码 char(32) md5加密的32位密码
+3. 邮箱 varchar(32) 唯一的邮箱
+4. 手机号码 varchar(11) 手机号码，不可重复
+5. 身份 varchar(6) 可以为'admin' 'sadmin' 'user'，默认为'user'
+
+#### 输出
+6. 错误代码 int 0注册成功，1用户名存在，2邮箱存在，3手机号存在
