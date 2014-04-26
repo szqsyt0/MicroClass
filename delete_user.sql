@@ -15,7 +15,8 @@ delete_user_main:begin
 		set errno = 1;
 		leave delete_user_main;
 	end if;
-	delete from `user` where id = `eid`;
+	delete from `user` where `user_id` = eid;
 	set errno = 0;
 end//
 delimiter ;
+
