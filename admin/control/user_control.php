@@ -48,9 +48,7 @@ class UserControl
         $result = $conn->query($query);        
         //取出返回值
         $return_values = $conn->query("select @err as error");
-        $array = mysqli_fetch_array($return_values); 
-        print_r($array);
-        die();
+        $array = mysqli_fetch_array($return_values);         
         $conn->close();
         return $array;
     }

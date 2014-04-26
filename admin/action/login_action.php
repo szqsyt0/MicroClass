@@ -15,6 +15,7 @@
             //保存session
             $_SESSION['user_name'] = $user_name;
             $_SESSION['user_identity'] = $result['identity'];
+            $_SESSION['user_id'] = $result['id'];
             //重定向浏览器
             header("Location:../admin.php");
             die();
