@@ -45,10 +45,12 @@ class UserControl
         $conn->query("set @identity='".$user_identity."'");
         //调用存储过程     
         $query = "call register(@username,@password,@email,@phone,@identity,@err);"; 
-        $result = $conn->query($query);
+        $result = $conn->query($query);        
         //取出返回值
         $return_values = $conn->query("select @err as error");
-        $array = mysqli_fetch_array($return_values);
+        $array = mysqli_fetch_array($return_values); 
+        print_r($array);
+        die();
         $conn->close();
         return $array;
     }
@@ -119,6 +121,17 @@ class UserControl
         $conn->close();
         return $return_values;
     }
-            
+     
+    
+    function delUser($user_id){
+        $conn = DbConnect();
+        //初始化变量
+        $conn->query("set @userid='".$user_id."'");
+        $sql = "call delete_user(@userid,@err);";
+        $result = $conn->query($sql);
+        $result = $conn->query("select @err as error");
+        $return_values = mysqli_fetch_array($result);
+        return $return_values;
+    }
 }
 

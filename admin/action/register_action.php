@@ -7,7 +7,6 @@
     $user_password = md5(trim($_POST['user_password']));
     $user_email = trim($_POST['user_email']);
     $user_phonenumber = trim($_POST['user_phonenumber']);
-   
     $user_identity = trim($_POST['user_identity']);
     
     //实例化用户控制类

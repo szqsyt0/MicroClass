@@ -207,8 +207,14 @@ function prevent_form_post(){
 
 function confirm_del()
 {
-    if(confirm("确定删除该管理员账号吗?")===true){
+    if($("#login_identity").attr("value")!=="sadmin"){
+        alert("权限不足！");
+        return false;
+    }
+    else{
+        if(confirm("确定删除该管理员账号吗?")===true){
         return true;
+    }
     }
     return false;
 }

@@ -53,6 +53,11 @@
                         <li><a class="current" href="admin.php">所有视频</a></li>                       
                     </ul>
                 </li>
+                <li> <a href="#" class="nav-top-item"> 图片管理 </a>
+                    <ul>
+                        <li><a href="#">所有图片</a></li>                       
+                    </ul>                   
+                </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
                     <ul>
                         <li><a href="#">所有评论</a></li>                       

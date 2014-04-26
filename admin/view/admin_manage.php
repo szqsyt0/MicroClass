@@ -54,6 +54,11 @@
                         <li><a href="../admin.php">所有视频</a></li>                       
                     </ul>
                 </li>
+                <li> <a href="#" class="nav-top-item"> 图片管理 </a>
+                    <ul>
+                        <li><a href="#">所有图片</a></li>                       
+                    </ul>                   
+                </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
                     <ul>
                         <li><a href="#">所有评论</a></li>                       
@@ -126,10 +131,10 @@
                 <th>权限</th>               
                 <th>手机号码</th>
                 <th>上次登录时间</th>
-                <th>操作</th>
+                <th></th>
               </tr>
             </thead>
-            <tfoot>
+            <tfoot>            
               <tr>
                 <td colspan="6">
                   <div class="bulk-actions align-left">
@@ -141,7 +146,7 @@
                   <!-- End .pagination -->
                   <div class="clear"></div>
                 </td>
-              </tr>
+              </tr>          
             </tfoot>
             <tbody>
                 <?php
@@ -152,8 +157,8 @@
                  $user = new User;
                     while(count($current_admin)){
                         $user = unserialize(array_pop($current_admin));
-                        ?>
-                            <tr>
+                        ?>           
+               <tr>            
                 <td>
                   <input type="checkbox" />
                 </td>   
@@ -164,12 +169,11 @@
                 <td><?php echo $user->getUserLastlogin();?></td>
                 <td>
                   <!-- Icons -->
-                  <a href="../action/user_action.php" title="Edit"><img src="../resources/images/icons/pencil.png" alt="Edit" /></a> <a href="../action/user_action.php" title="Delete" onclick="return confirm_del();"><img src="../resources/images/icons/cross.png" alt="Delete" /></a>  </td>
-              </tr>
+                  <a href="#" title="修改"><img src="../resources/images/icons/pencil.png" alt="修改" /></a> <a href="../action/user_action.php?user_id=<?php echo $user->getUserId();?>&flag=del_user" title="删除" onclick="return confirm_del();"><img src="../resources/images/icons/cross.png" alt="删除" /></a>  </td>
+              </tr>            
                         <?php
                     }
-                ?>
-              
+                ?>              
             </tbody>
           </table>
         </div>
