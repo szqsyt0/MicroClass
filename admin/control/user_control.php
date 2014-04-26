@@ -1,6 +1,7 @@
 <?php
 
 require '../db_connect.php';
+require '../model/user.php';
 class UserControl
 {
     /**
@@ -93,5 +94,31 @@ class UserControl
         $conn->close();
         return $return_value;
     }
+    
+    /**
+     * 获取管理员列表
+     */
+    function getAdminList($page_num,$list_num){
+        $conn = DbConnect();
+        //初始化变量
+        $conn->query("set @pagenum='".$page_num."'");
+        $conn->query("set @listnum='".$list_num."'");
+        $sql = "call show_admins(@pagenum,@listnum,@err);";
+        $result = $conn->query($sql);
+        $return_values = array();
+        while($row = mysqli_fetch_array($result)){
+            $user = new User();
+            $user->setUserName($row['user_name']);
+            $user->setUserEmail($row['user_email']);
+            $user->setUserIdentity($row['user_identity']);
+            $user->setUserPhoneNumber($row['user_phonenumber']);
+            $user->setUserLastLogin($row['user_lastlogin']);
+            $user->setUserId($row['user_id']);
+            array_push($return_values, serialize($user));
+        }
+        $conn->close();
+        return $return_values;
+    }
+            
 }
 

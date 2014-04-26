@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../resources/scripts/facebox.js"></script>
 <!-- jQuery WYSIWYG Plugin -->
 <script type="text/javascript" src="../resources/scripts/jquery.wysiwyg.js"></script>
-<script type="text/javascript" src="../resources/support.js"></script>
+<script type="text/javascript" src="../resources/user.js"></script>
 <!-- jQuery Datepicker Plugin -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
@@ -30,7 +30,7 @@
  <?php
  session_start();
  if(empty($_SESSION['user_name'])){
-     header("Location:./login.php");
+     header("Location:../login.php");
      die();
  }
  ?>
@@ -84,7 +84,7 @@
     <noscript>
             <!-- Show a notification if the user has disabled javascript -->
             <div class="notification error png_bg">
-              <div> 您的浏览器不支持Javascript，请使用其他浏览器打开</div>
+              <div> 您的浏览器不支持Javascript，请使用其他浏览器打开 </div>
             </div>
             </noscript>
             <!-- Page Head -->
@@ -118,14 +118,15 @@
           <table>
             <thead>
               <tr>
-                <th>
+                  <th>
                   <input class="check-all" type="checkbox" />
                 </th>
-                <th>名称</th>
-                <th>专辑</th>
-                <th>类别</th>               
-                <th>简介</th>
-                <th></th>
+                <th>用户名</th>
+                <th>邮箱</th>
+                <th>权限</th>               
+                <th>手机号码</th>
+                <th>上次登录时间</th>
+                <th>操作</th>
               </tr>
             </thead>
             <tfoot>
@@ -144,19 +145,26 @@
             </tfoot>
             <tbody>
                 <?php
-                    for($i=0;$i<20;$i++){
+                 require '../control/user_control.php';
+                 $userControl = new UserControl();
+                 $current_admin = $userControl->getAdminList(1, 20);   
+                 
+                 $user = new User;
+                    while(count($current_admin)){
+                        $user = unserialize(array_pop($current_admin));
                         ?>
                             <tr>
                 <td>
                   <input type="checkbox" />
-                </td>
-                <td>Lorem ipsum dolor</td>
-                <td><a href="#" title="title">Sit amet</a></td>
-                <td>Consectetur adipiscing</td>
-                <td>Donec tortor diam</td>
+                </td>   
+                <td><?php echo $user->getUserName();?></td>
+                <td><a href="#" title="title"><?php echo $user->getUserEmail();?></a></td>
+                <td><?php echo $user->getUserIdentity();?></td>
+                <td><?php echo $user->getUserPhoneNumber();?></td>
+                <td><?php echo $user->getUserLastlogin();?></td>
                 <td>
                   <!-- Icons -->
-                  <a href="#" title="Edit"><img src="../resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="../resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="../resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                  <a href="../action/user_action.php" title="Edit"><img src="../resources/images/icons/pencil.png" alt="Edit" /></a> <a href="../action/user_action.php" title="Delete" onclick="return confirm_del();"><img src="../resources/images/icons/cross.png" alt="Delete" /></a>  </td>
               </tr>
                         <?php
                     }
