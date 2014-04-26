@@ -4,9 +4,11 @@
   登录验证的存储过程。
 
 ### 参数列表
+
 #### 输入
 1. 用户名 varchar(32) 可以为邮箱或用户名
 2. 密码 char(32) md5加密过的32位密码
+
 #### 输出
 1. id unsignded int 型的用户id号
 2. 身份 varchar(6) 管理员为sadmin或admin，用户为user
