@@ -42,7 +42,7 @@ create table `album` (
 	`album_id` int unsigned not null primary key auto_increment comment 
 '专辑id',
 	`album_name` varchar(32) not null unique comment '专辑名，不可重复',
-	`album_cover` longblob comment '使用longblob直接存储封面',
+	`album_cover` varchar(32) comment '使用图片路径存储封面',
 	`album_playcount` int UNSIGNED not null default 0 comment '播放数',
 	`album_introduction` text comment '专辑简介'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
@@ -60,7 +60,7 @@ create table `teacher` (
 	`teacher_id` int UNSIGNED not null primary key AUTO_INCREMENT comment 
 '授课教师id',
 	`teacher_name` varchar(32) not null comment '教师名字',
-	`teacher_photo` longblob comment '照片',
+	`teacher_photo` varchar(32) comment '使用路径存储照片',
 	`teacher_introduction` text comment '教师简介'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
@@ -69,7 +69,7 @@ CREATE TABLE `video` (
 	`video_id` int UNSIGNED not null primary key auto_increment comment '自动增长的视频ID',
 	`video_title` varchar(50) not null comment '视频标题',
 	`video_path` varchar(32) not null comment '视频的相对存储路径',
-	`video_screenshot` longblob comment '视频截图(封面)，使用longblob直接存入mysql',
+	`video_screenshot` varchar(32) comment '视频截图(封面)，使用路径存储',
 	`video_playcount` int UNSIGNED not null default 0 comment '播放次数统计',
 	`video_rating` tinyint not null default 0 comment '平均评分',
 	`video_rating_count` int UNSIGNED not null default 0 comment '评分次数',
