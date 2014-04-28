@@ -23,6 +23,7 @@
 <!-- jQuery Datepicker Plugin -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
+
 </head>
 <body>
 <div id="body-wrapper">
@@ -33,7 +34,14 @@
      header("Location:../login.php");
      die();
  }
+ require '../control/user_control.php';
+ //实例化用户控制类
+    $userControl = new UserControl();
+    $user_info = $userControl->getUserInfo($_SESSION['user_id']);
+    $_SESSION['user_phonenumber'] = $user_info['user_phonenumber'];
+    $_SESSION['user_email'] = $user_info['user_email'];
  ?>
+  
   <div id="sidebar">
       
             <div id="sidebar-wrapper">
@@ -75,9 +83,9 @@
                     </ul> 
                 </li>
                 <li> <a href="#" class="nav-top-item current"> 账号设置 </a>
-                    <ul>  
-                        <li><a class="current" href="./admin_manage.php">所有管理员</a></li>  
-                        <li><a href="./user_edit.php">个人信息</a></li> 
+                    <ul>
+                        <li><a href="./admin_manage.php">所有管理员</a></li>  
+                        <li><a class="current" href="./user_edit.php">个人信息</a></li> 
                     </ul>
                 </li>
               </ul>
@@ -94,115 +102,67 @@
             </div>
             </noscript>
             <!-- Page Head -->
-            <h2>后台管理</h2>
+            <h2>后台管理</h2>            
             <p id="page-intro">欢迎进入微课网后台管理页面</p>
+<!--            <ul class="shortcut-buttons-set">
+              <li><a class="shortcut-button" href="#"><span> <img src="../resources/images/icons/image_add_48.png" alt="icon" /><br />
+                上传视频 </span></a></li>
+            </ul>-->
+            <!-- End .shortcut-buttons-set -->
+            <div class="clear"></div>
+            <!-- End .clear -->
     <div class="content-box">
       <!-- Start Content Box -->
       <div class="content-box-header">
-        <h3>管理员列表</h3>
-        <ul class="content-box-tabs">
-          <li><a href="#tab1" class="default-tab">名单</a></li>
-          <!-- href must be unique and match the id of target div -->
-          <li><a href="#tab2">添加管理员</a></li>
-        </ul>
+        <h3>个人信息</h3>       
         <div class="clear"></div>
       </div>
       <!-- End .content-box-header -->
       <div class="content-box-content">
-        <div class="tab-content default-tab" id="tab1">
-          <!-- This is the target div. id must match the href of this div's tab -->
-          <div class="notification attention png_bg"> <a href="#" class="close"><img src="../resources/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
-            <div> 这里是管理员列表，你可以在这里进行对管理员账户的相应操作 </div>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                  <th>
-                  <input class="check-all" type="checkbox" />
-                </th>
-                <th>用户名</th>
-                <th>邮箱</th>
-                <th>权限</th>               
-                <th>手机号码</th>
-                <th>上次登录时间</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tfoot>            
-              <tr>
-                <td colspan="6">
-                  <div class="bulk-actions align-left">
-                    <select name="dropdown">                               
-                      <option value="option1">批量删除</option>
-                    </select>
-                    <a class="button" href="#">确定</a> </div>
-                  <div class="pagination"> <a href="#" title="First Page">&laquo; 首页</a><a href="#" title="Previous">&laquo; 上一页</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">下一页 &raquo;</a><a href="#" title="Last Page">尾页 &raquo;</a> </div>
-                  <!-- End .pagination -->
-                  <div class="clear"></div>
-                </td>
-              </tr>          
-            </tfoot>
-            <tbody>
-                <?php
-                 require '../control/user_control.php';
-                 $userControl = new UserControl();
-                 $current_admin = $userControl->getAdminList(1, 20);   
-                 
-                 $user = new User;
-                    while(count($current_admin)){
-                        $user = unserialize(array_pop($current_admin));
-                        ?>           
-               <tr>            
-                <td>
-                  <input type="checkbox" />
-                </td>   
-                <td><?php echo $user->getUserName();?></td>
-                <td><a href="#" title="title"><?php echo $user->getUserEmail();?></a></td>
-                <td><?php echo $user->getUserIdentity();?></td>
-                <td><?php echo $user->getUserPhoneNumber();?></td>
-                <td><?php echo $user->getUserLastlogin();?></td>
-                <td>
-                  <!-- Icons -->
-                  <a href="../action/user_action.php?user_id=<?php echo $user->getUserId();?>&flag=del_user" title="删除" onclick="return confirm_del();"><img src="../resources/images/icons/cross.png" alt="删除" /></a>  </td>
-              </tr>            
-                        <?php
-                    }
-                ?>              
-            </tbody>
-          </table>
-        </div>
-        <!-- End #tab1 -->
-        <div class="tab-content" id="tab2">
+        
+        <div class="tab-content default-tab" id="tab2">
             <!--用于判断用户身份-->
             <input style="display: none" id="login_identity" value="<?php echo $_SESSION['user_identity'];?>"/>
-            <form action="../action/register_action.php" method="post" name="add_admin" onsubmit="return prevent_form_post();">
+            <input style="display: none" id="login_password" value="<?php echo $_SESSION['user_password'];?>"/>
+            <form action="../action/user_action.php" method="post" name="add_admin" onsubmit="return can_change_userinfo();">
             <fieldset>
             <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
-            <p>
-                <label>用户名</label>
-                <input class="text-input small-input" type="text" id="user_name" name="user_name" onblur="isUserExist();"/>
-                <span class="input-notification error png_bg" style="display: none" id="userexist">用户名已存在</span> 
-                <span class="input-notification success png_bg" style="display: none" id="usernotexist"></span>
-              <!-- Classes for input-notification: success, error, information, attention -->
-              <br />             
-              </p>
-            <p>                
-                <label>密码</label>
-                <input  class="text-input small-input" type="password"  name="user_password" id="password"/>
-                <span class="input-notification success png_bg" style="display: none" id="password2"></span>
-              <!-- Classes for input-notification: success, error, information, attention -->
+            <p style="display: none">
+                <label>ID</label>
+                <input class="text-input small-input" type="text" name="user_id" value="<?php echo $_SESSION['user_id'];?>" readonly="readonly"/>
+                <input class="text-input small-input" type="text" name="flag" value="edit_user"/><!--要进行的动作-->
               <br />             
             </p>
             <p>
+                <label>用户名</label>
+                <input class="text-input small-input" type="text" id="user_name" name="user_name" value="<?php echo $_SESSION['user_name'];?>" readonly="readonly"/> <input id="show_changepassword" class="button" type="button" value="修改密码" onclick="show_changepasswd();"/>                            
+              <br />             
+              </p>
+            <p id="old_passwd" style="display: none;">                
+                <label>旧密码</label>
+                <input class="text-input small-input" type="password"  name="old_password" id="old_password" onblur="check_oldpassword();"/>
+                <span class="input-notification success png_bg" style="display: none" id="old_password_true" ></span>
+                <span class="input-notification error png_bg" style="display: none" id="old_password_false">密码错误</span>
+              <!-- Classes for input-notification: success, error, information, attention -->
+              <br />             
+            </p>
+            <p id="passwd" style="display: none;">                
+                <label>新密码</label>
+                <input class="text-input small-input" type="password"  name="user_password" id="password"/>
+                <span class="input-notification success png_bg" style="display: none" id="password2" ></span>
+              <!-- Classes for input-notification: success, error, information, attention -->
+              <br />             
+            </p>
+            <p id="passwd1" style="display: none;">
               <label>确认密码</label>
-              <input  class="text-input small-input" type="password"  name="user_password2" id="password1" onblur="return isPasswordEqual();"/>
+              <input class="text-input small-input" type="password"  name="user_password2" id="password1" onblur="return isPasswordEqual();" />
               <span class="input-notification error png_bg" style="display: none" id="errorpassword">两次输入的密码不一致</span> 
               <span class="input-notification success png_bg" style="display: none" id="rightpassword"></span>
             </p>
            
             <p>
                 <label>邮箱</label>
-                <input class="text-input small-input" type="email" id="user_email" name="user_email" onblur="isEmailExist();"/>
+                <input class="text-input small-input" type="email" id="user_email" name="user_email" value="<?php echo $user_info['user_email'];?>" onclick="if(this.value==='<?php echo $user_info['user_email'];?>'){this.value='';}" onblur="if(this.value==='') {this.value='<?php echo $user_info['user_email'];?>';}else if(this.value!=='<?php echo $user_info['user_email'];?>'){isEmailExist();}"/>
                 <span class="input-notification error png_bg" style="display: none" id="emailexist">该邮箱已存在</span> 
                 <span class="input-notification success png_bg" style="display: none" id="emailnotexist"></span>
               <!-- Classes for input-notification: success, error, information, attention -->
@@ -210,19 +170,24 @@
             </p>
             <p>
                 <label>手机号码</label>
-                <input class="text-input small-input" type="tel" id="user_phonenumber" name="user_phonenumber" onblur="isPhoneExist();"/>
+                <input class="text-input small-input" type="tel" id="user_phonenumber" name="user_phonenumber" value="<?php echo $user_info['user_phonenumber'];?>" onclick="if(this.value==='<?php echo $user_info['user_phonenumber'];?>'){this.value='';}" onblur="if(this.value==='') {this.value='<?php echo $user_info['user_phonenumber'];?>';}else if(this.value!=='<?php echo ['user_phonenumber'];?>'){isPhoneExist();}"/>
                 <span class="input-notification error png_bg" style="display: none" id="phoneexist">该手机号码已存在</span> 
                 <span class="input-notification success png_bg" style="display: none" id="phonenotexist"></span>
               <!-- Classes for input-notification: success, error, information, attention -->
               <br />             
-            </p>  
-            <p>
-              <label>权限</label>
-              <select name="user_identity" id="user_identity" class="small-input">
-                  <option value="admin">普通管理员</option>
-                  <option value="sadmin">超级管理员</option>
-              </select>
-            </p>
+            </p> 
+            <?php                
+                if($_REQUEST['login_identity']=="sadmin"){
+                    ?>
+                    <p>
+                    <label>权限</label>
+                    <select name="user_identity" id="user_identity" class="small-input">
+                        <option value="admin">普通管理员</option>
+                        <option value="sadmin">超级管理员</option>
+                    </select>
+                    </p>
+               <?php }                                    
+               ?>
             <p>
                 <input class="button" type="submit" value="Submit"/>
             </p>

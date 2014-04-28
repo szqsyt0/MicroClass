@@ -44,7 +44,7 @@ function isUserExist(){
         //第一个参数表示请求的方式
         //第二个参数指定url,对哪个页面发出ajax请求(本质是http请求)
         //true表示使用异步机制
-        var url = "../action/username_check.php?username="+$("#user_name").attr("value");
+        var url = "../action/register_action.php?flag=usernamecheck&username="+$("#user_name").attr("value");
         xmlHttp.open("get",url,true);
         //指定回调函数
         xmlHttp.onreadystatechange=userDeal;
@@ -84,7 +84,7 @@ function isEmailExist(){
         //第一个参数表示请求的方式
         //第二个参数指定url,对哪个页面发出ajax请求(本质是http请求)
         //true表示使用异步机制
-        var url = "../action/useremail_check.php?useremail="+$("#user_email").attr("value");
+        var url = "../action/register_action.php?flag=emailcheck&useremail="+$("#user_email").attr("value");
         xmlHttp.open("get",url,true);
         //指定回调函数
         xmlHttp.onreadystatechange=emailDeal;
@@ -125,7 +125,7 @@ function isPhoneExist(){
         //第一个参数表示请求的方式
         //第二个参数指定url,对哪个页面发出ajax请求(本质是http请求)
         //true表示使用异步机制
-        var url = "../action/userphone_check.php?userphone="+$("#user_phonenumber").attr("value");
+        var url = "../action/register_action.php?flag=phonecheck&userphone="+$("#user_phonenumber").attr("value");
         xmlHttp.open("get",url,true);
         //指定回调函数
         xmlHttp.onreadystatechange=phoneDeal;
@@ -219,6 +219,79 @@ function confirm_del()
     return false;
 }
 
+//判断是否为超级管理员，否则不能修改管理员信息
+function comfirm_identity(){
+    if($("#login_identity").attr("value")!=="sadmin"){
+        alert("权限不足，只有超级管理员才能修改其他人信息！");
+        return false;
+    }
+    return true;
+}
+
+//显示修改密码
+function show_changepasswd(){
+    
+    if($('#show_changepassword').attr("value")==='修改密码'){
+        
+        document.getElementById('passwd').style.display='block';
+        document.getElementById('passwd1').style.display='block';
+        document.getElementById('old_passwd').style.display='block';
+        document.getElementById('show_changepassword').value='取消';
+    }
+    else if($('#show_changepassword').attr("value")==='取消'){
+        document.getElementById('passwd').style.display='none';
+        document.getElementById('passwd1').style.display='none';
+        document.getElementById('old_passwd').style.display='none';
+        document.getElementById('show_changepassword').value='修改密码';
+    }
+}
+
+/**
+ * 检验旧密码是否正确
+ * @returns {undefined}
+ */
+function check_oldpassword(){
+    if($("#old_password").attr("value")!==$("#login_password").attr("value")){
+        $("#old_password_false").css("display","inline");
+        $("#old_password_true").css("display","none");
+    }
+    else if($("#old_password").attr("value")===$("#login_password").attr("value")){
+        $("#old_password_false").css("display","none");
+        $("#old_password_true").css("display","inline");
+    }
+}
+
+
+/**
+ * 若表单填写有误则禁止提交表单
+ * @returns {Boolean}
+ */
+function can_change_userinfo(){
+     
+    if(document.getElementById("old_password_false").style.display==="inline"){
+        document.getElementById("old_password").focus();
+        return false;
+    }
+    //判断Email是否为空
+    else if($("#user_email").attr("value")===""){
+        document.getElementById("user_email").focus();
+        return false;
+    }
+    else if(document.getElementById("emailexist").style.display==="inline"){
+        document.getElementById("user_email").focus();
+        return false;
+    }
+    //判断手机号码是否为空
+    else if($("#user_phonenumber").attr("value")===""){
+        document.getElementById("user_phonenumber").focus();
+        return false;
+    } 
+    else if(document.getElementById("phoneexist").style.display==="inline"){
+        document.getElementById("user_phonenumber").focus();
+        return false;
+    }
+    return true;
+}
 
 
 

@@ -9,8 +9,37 @@
     $user_phonenumber = trim($_POST['user_phonenumber']);
     $user_identity = trim($_POST['user_identity']);
     
+    
+    //获取ajax提交的邮箱地址
+    $useremail = trim($_GET['useremail']);
+    //获取ajax提交的用户名
+    $username = trim($_GET['username']);
+    //获取ajax提交的手机号码地址
+    $userphone = trim($_GET['userphone']);
+    //获取ajax提交的标志位
+    $flag = trim($_GET['flag']);
+    
     //实例化用户控制类
     $userControl = new UserControl();
+    
+    //验证email是否存在
+    if($flag=="emailcheck"){
+        $array = $userControl->isEmailExist($useremail);         
+        echo $array[0];
+        die();
+    }
+    //验证手机号码是否存在
+    else if($flag=="phonecheck"){
+        $array = $userControl->isPhoneExist($userphone);          
+        echo $array[0];
+        die();
+    }
+    //验证用户名是否存在
+    else if($flag=="usernamecheck"){
+        $array = $userControl->isUserExist($username);         
+        echo $array[0];
+        die();
+    }
     
     //开始尝试注册
     try{

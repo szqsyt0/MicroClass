@@ -17,10 +17,10 @@ class UserControl
         //调用存储过程
         $conn->query("set @username='".$user_name."'");
         $conn->query("set @password='".$user_password."'");
-        $query = "call login(@username,@password,@identity,@err);";
+        $query = "call login(@username,@password,@id,@identity,@err);";
         $result = $conn->query($query);
         //取出返回值
-        $return_values = $conn->query("select @identity as identity,@err as error");
+        $return_values = $conn->query("select @identity as identity,@id as id,@err as error");
         $array = mysqli_fetch_array($return_values);
         $conn->close();
         return $array;
@@ -120,7 +120,11 @@ class UserControl
         return $return_values;
     }
      
-    
+    /**
+     * 删除管理员账号
+     * @param type $user_id
+     * @return type
+     */
     function delUser($user_id){
         $conn = DbConnect();
         //初始化变量
@@ -130,6 +134,43 @@ class UserControl
         $result = $conn->query("select @err as error");
         $return_values = mysqli_fetch_array($result);
         return $return_values;
+    }
+    
+    /**
+     * 获取用户全部信息
+     * @param type $user_id
+     */
+    function getUserInfo($user_id){
+         $conn = DbConnect();
+        //初始化变量
+        $conn->query("set @userid='".$user_id."'");
+        $sql = "call get_user_info(@userid,@err);";
+        $result = $conn->query($sql);
+        $error = $conn->query("select @err;");
+        if($error!==0){
+            echo "修改失败，请稍后再试";
+            header("#");//跳转到错误页面
+        }
+        $return_values = mysqli_fetch_array($result);
+        return $return_values;
+    }
+    
+    function updateUserInfo($user_id,$user_password,$user_email,$user_phonenumber,$user_identity){
+        $conn = DbConnect();
+        //初始化变量
+        $conn->query("set @userid='".$user_id."'");
+        $conn->query("set @password='".$user_password."'");
+        $conn->query("set @email='".$user_email."'");
+        $conn->query("set @phone='".$user_phonenumber."'");
+        $conn->query("set @identity='".$user_identity."'");
+        
+        $query = "call change_userinfo(@userid,@password,@email,@phone,@identity,@err);"; 
+        $result = $conn->query($query);        
+        //取出返回值
+        $return_values = $conn->query("select @err as error");
+        $array = mysqli_fetch_array($return_values);         
+        $conn->close();
+        return $array;
     }
 }
 

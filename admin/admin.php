@@ -41,7 +41,7 @@
               <!-- Logo (221px wide) -->
               <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
               <!-- Sidebar Profile links -->
-              <div id="profile-links"> 欢迎,<a href="#" title="Edit your profile"><?php echo $_SESSION['user_name'];?></a><br />
+              <div id="profile-links"> 欢迎,<a href="./view/user_edit.php" title="Edit your profile"><?php echo $_SESSION['user_name'];?></a><br />
                 <br />
                 <a href="#" title="View the Site">前往首页</a> | <a href="logout.php" title="Sign Out">退出</a> </div>
               <ul id="main-nav">
@@ -75,7 +75,8 @@
                 </li>
                 <li> <a href="#" class="nav-top-item"> 账号设置 </a>
                     <ul>
-                        <li><a href="./view/admin_manage.php">设置</a></li>                       
+                        <li><a href="./view/admin_manage.php">所有管理员</a></li>  
+                        <li><a href="./view/user_edit.php">个人信息</a></li> 
                     </ul>
                 </li>
               </ul>
