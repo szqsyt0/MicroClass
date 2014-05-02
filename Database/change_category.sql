@@ -15,7 +15,7 @@ change_category_main:begin
 	declare eid int unsigned;
 	declare pid int unsigned;
 
-	# 分类名不存在
+	# 分类id不存在
 	select `category_id` into eid from `category` where `category_id`=id;
 	if (eid is null) then
 		set errno = 1;
