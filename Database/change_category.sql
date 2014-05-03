@@ -24,7 +24,7 @@ change_category_main:begin
 
 	# 父分类传来null
 	if (parentid is null) then
-		pid = 0;
+		set pid = 0;
 	else # 判断父分类不为空 || 父分类id不存在
 		select `category_id` into pid from `category` where `category_id`=parentid;
 		if (pid is null) then
