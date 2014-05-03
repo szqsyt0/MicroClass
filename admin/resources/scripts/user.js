@@ -61,14 +61,12 @@ function userDeal(){
            var return_values = xmlHttp.responseText;
            if(return_values === '0'){
                document.getElementById("userexist").style.display="none";
-               document.getElementById("usernotexist").style.display="inline";
-               
+               document.getElementById("usernotexist").style.display="inline";               
            }
            else if(return_values === '1')
            {
                document.getElementById("userexist").style.display="inline";
-               document.getElementById("usernotexist").style.display="none";
-               
+               document.getElementById("usernotexist").style.display="none";               
            }
        }
 }

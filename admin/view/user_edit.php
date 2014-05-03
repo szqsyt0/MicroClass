@@ -19,7 +19,7 @@
 <script type="text/javascript" src="../resources/scripts/facebox.js"></script>
 <!-- jQuery WYSIWYG Plugin -->
 <script type="text/javascript" src="../resources/scripts/jquery.wysiwyg.js"></script>
-<script type="text/javascript" src="../resources/user.js"></script>
+<script type="text/javascript" src="../resources/scripts/user.js"></script>
 <!-- jQuery Datepicker Plugin -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
@@ -69,7 +69,7 @@
                 </li>
                 <li> <a href="#" class="nav-top-item"> 评论管理 </a>
                     <ul>
-                        <li><a href="#">所有评论</a></li>                       
+                        <li><a href="../view/comment_manage.php">所有评论</a></li>                       
                     </ul>                   
                 </li>
                 <li> <a href="#" class="nav-top-item"> 专辑管理 </a>
@@ -79,7 +79,7 @@
                 </li>
                 <li> <a href="#" class="nav-top-item"> 分类管理</a>
                      <ul>
-                        <li><a href="#">所有分类</a></li>                       
+                         <li><a href="./category_manage.php">所有分类</a></li>                       
                     </ul> 
                 </li>
                 <li> <a href="#" class="nav-top-item current"> 账号设置 </a>
@@ -103,7 +103,7 @@
             </noscript>
             <!-- Page Head -->
             <h2>后台管理</h2>            
-            <p id="page-intro">欢迎进入微课网后台管理页面</p>
+            <p id="page-intro">欢迎进入微学后台管理系统</p>
 <!--            <ul class="shortcut-buttons-set">
               <li><a class="shortcut-button" href="#"><span> <img src="../resources/images/icons/image_add_48.png" alt="icon" /><br />
                 上传视频 </span></a></li>
@@ -202,7 +202,7 @@
     </div>
     <div id="footer"> <small>
       <!-- Remove this notice or replace it with whatever you want -->
-      &#169; Copyright 2014 MicroClass | Powered by <a href="#">admin templates</a> | <a href="#">返回顶部</a> </small> </div>
+      &#169; Copyright 2014 MicroClass | Powered by <a href="#">微学</a> | <a href="#">返回顶部</a> </small> </div>
     <!-- End #footer -->
   </div>
   <!-- End #main-content -->
