@@ -1,9 +1,9 @@
 # 创建专用用户
-#CREATE USER 'MicroClassUser'@'localhost' IDENTIFIED BY 'TeXk$u123';
+CREATE USER 'MicroClassUser'@'localhost' IDENTIFIED BY 'TeXk$u123';
 # 创建数据库microclass
 CREATE DATABASE microclass CHARACTER SET utf8;
 # 只给用户执行的权力
-#GRANT execute ON microclass.* TO MicroClassUser@localhost;
+GRANT execute ON microclass.* TO MicroClassUser@localhost;
 
 # 创建表开始
 USE microclass;
@@ -42,7 +42,7 @@ create table `album` (
 	`album_id` int unsigned not null primary key auto_increment comment 
 '专辑id',
 	`album_name` varchar(32) not null unique comment '专辑名，不可重复',
-	`album_cover` longblob comment '使用longblob直接存储封面',
+	`album_cover` varchar(32) comment '使用图片路径存储封面',
 	`album_playcount` int UNSIGNED not null default 0 comment '播放数',
 	`album_introduction` text comment '专辑简介'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
@@ -60,7 +60,7 @@ create table `teacher` (
 	`teacher_id` int UNSIGNED not null primary key AUTO_INCREMENT comment 
 '授课教师id',
 	`teacher_name` varchar(32) not null comment '教师名字',
-	`teacher_photo` longblob comment '照片',
+	`teacher_photo` varchar(32) comment '使用路径存储照片',
 	`teacher_introduction` text comment '教师简介'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
@@ -69,7 +69,7 @@ CREATE TABLE `video` (
 	`video_id` int UNSIGNED not null primary key auto_increment comment '自动增长的视频ID',
 	`video_title` varchar(50) not null comment '视频标题',
 	`video_path` varchar(32) not null comment '视频的相对存储路径',
-	`video_screenshot` longblob comment '视频截图(封面)，使用longblob直接存入mysql',
+	`video_screenshot` varchar(32) comment '视频截图(封面)，使用路径存储',
 	`video_playcount` int UNSIGNED not null default 0 comment '播放次数统计',
 	`video_rating` tinyint not null default 0 comment '平均评分',
 	`video_rating_count` int UNSIGNED not null default 0 comment '评分次数',
@@ -146,6 +146,7 @@ REFERENCES `video` (`video_id`) on delete cascade on update cascade,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 #################################创建表结束#####################################
+ 
 delimiter //
 /*******************************************************************************
  * 添加分类
@@ -197,7 +198,39 @@ begin
 end//
 delimiter ;
 ############################################################################ 
+/*******************************************************************************
+ * 添加一条评论
+ * 输入：评论者名字，评论的视频，父评论的id，评论内容
+ * 输出：错误代码
+ * 错误代码：0成功，1错误
+ *******************************************************************************/
+delimiter //
+create procedure `add_comment` (
+	in commenter varchar(32),
+	in video int unsigned,
+	in parent int unsigned,
+	in content text,
+	out errno int
+)
+add_comment_main:begin
 
+
+INSERT INTO `microclass`.`comment`
+(`parent_id`,
+`video_id`,
+`commentator_id`,
+`comment_text`,
+`comment_time`)
+VALUES
+(<{parent_id: }>,
+<{video_id: }>,
+<{commentator_id: }>,
+<{comment_text: }>,
+<{comment_time: }>);
+
+end//
+delimiter ;;
+/*******************************************************************************
  * 修改分类信息
  * 输入：分类id，新分类名，新父分类名
  * 输出：错误代码
@@ -214,7 +247,7 @@ change_category_main:begin
 	declare eid int unsigned;
 	declare pid int unsigned;
 
-	# 分类名不存在
+	# 分类id不存在
 	select `category_id` into eid from `category` where `category_id`=id;
 	if (eid is null) then
 		set errno = 1;
@@ -283,23 +316,81 @@ end//##########################修改密码结束###############################
 delimiter ; 
 delimiter //
 /*******************************************************************************
- * 修改用户信息，待完善
- * 接收：用户名，新邮箱，新手机号
+ * 修改用户信息
+ * 接收：用户id，新密码，新邮箱，新手机号，新身份
  * 返回：错误代码
- * 错误代码：0成功，1
+ * 错误代码：0成功，1用户id不存在，2邮箱被占用，3手机号被占用，4密码格式错误
  ******************************************************************************/
 create procedure `change_userinfo` (
-	in name varchar(32),
+	in id int unsigned,
+	in password char(32),
 	in email varchar(32),
-	in phonenumber varchar(32),
+	in phonenumber varchar(11),
+	in identity varchar(6),
 	out errno int
 )
-begin
+change_userinfo_main:begin
+	declare eid int unsigned;
+	declare u1 varchar(255);
 
+	if (password is not null && password != '' && length(password) != 32) then 
+		-- 密码格式错误且密码不为空
+		set errno = 5;
+		leave change_userinfo_main;
+	end if;
+
+	select `user_id` into eid from `user` where `user_id` = id;
+	if (eid is null) then -- id不存在
+		set errno = 1;
+		leave change_userinfo_main;
+	end if;
+
+	if (useremail_existed(email)) then -- 新邮箱被占用
+		set errno = 2;
+		leave change_userinfo_main;
+	end if;
+
+	if (userphone_existed(phonenumber) ) then -- 手机号已存在
+		set errno = 3;
+		leave change_userinfo_main;
+	end if;
+
+	# 开始写入中间字符串u1
+	# 先来email
+	if (email is not null && email != '') then 
+		set u1=concat_ws('','`user_email`=\'',email,'\'');
+	end if;
+	# 手机号
+	if (phonenumber is not null && phonenumber!= '') then
+		if (u1 is not null) then -- u1已有值，需要逗号
+			set u1 = concat_ws('',u1,',');
+		end if;
+		set u1=concat_ws('',u1,'`user_phonenumber`=\'',phonenumber,'\'');
+	end if;
+	# 身份
+	if (identity is not null && identity != '') then
+		if (u1 is not null) then -- u1已有值，需要逗号
+			set u1 = concat_ws('',u1,',');
+		end if;
+		set u1=concat_ws('',u1,'`user_identity`=\'',identity,'\'');
+	end if;
+	# 密码
+	if (password is not null && password != '') then
+		if (u1 is not null) then -- u1已有值，需要逗号
+			set u1 = concat_ws('',u1,',');
+		end if;
+		set u1=concat_ws('',u1,'`user_password`=\'',password,'\'');
+	end if;
+
+	# 中间字符串处理完毕，整理sql,准备执行
+	set @sql = concat_ws('','update `user` set ',u1,'where `user_id` = ',eid);
+	prepare stmt from @sql;
+	execute stmt;
+	deallocate prepare stmt;
+
+	set errno = 0;
 end//
 delimiter ;
-
- 
 /*******************************************************************************
  * 删除单个分类,将删除所选分类的所有子分类
  * 输入：分类id
@@ -562,6 +653,34 @@ show_admins_main:begin
 end//
 delimiter ;
 
+/*******************************************************************************
+ * 显示专辑
+ * 接收：页码，页大小
+ * 返回：错误代码
+ * 错误代码：0成功，1错误
+ ******************************************************************************/
+delimiter //
+create procedure show_albums (
+	in pagenum int,
+	in pagesize int,
+	out errno int
+)
+show_albums_main:begin
+	declare position int;
+	if (pagenum < 0 || pagesize < 0) then
+		set errno = 1;
+		leave show_albums_main;
+	end if;
+	set position=(pagenum - 1) * pagesize;
+	select * from `album` limit position, pagesize;
+	set errno = 0;
+end//
+delimiter ;
+
+/*******************************************************************************
+ * 显示所有分类
+ * 返回：category表中所有信息
+ ******************************************************************************/
 DELIMITER //
 CREATE PROCEDURE `show_categories` ()
 begin 
