@@ -1,3 +1,4 @@
+﻿<!-- 编程基础-C/C++ -->
 <!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
@@ -30,16 +31,16 @@
 <div class="top">
     <div class="container">         
         <ul class="loginbar pull-right">           
-            <li><a href="page_login.html" class="login-btn">登录</a></li>  
+             <li><a href="page_login.html" class="login-btn">登录</a> / <a href="page_registration.html" class="login-btn">注册</a></li>   
             <li class="devider">&nbsp;</li>
             <li>
-                <a href="#" class="login-btn dropdown-toggle" data-toggle="dropdown">我的微学</a>
+                <a href="micro_study.html">我的微学</a>
                 
-                <ul class="dropdown-menu">
-                                <li><a href="#">我的收藏</a></li>
-                                <li><a href="#">我的笔记</a></li>
-                                <li><a href="#">我的问答</a></li>
-                                <li><a href="#">播放记录</a></li>                                
+                <ul class="nav-list">
+                                <li><a href="micro_study.html">我的收藏</a></li>
+                                <li><a href="micro_study1.html">我的笔记</a></li>
+                                <li><a href="micro_study2.html">我的问答</a></li>
+                                <li><a href="micro_study3.html">播放记录</a></li>                                
                                 <li><a href="#">退出</a></li>                                                              
                 </ul>
             </li>     
@@ -52,122 +53,114 @@
 
 <!--=== Header ===-->
 <div class="header">               
-    <div class="container"> 
-        <!-- Logo -->       
-        <div class="logo">                                             
-            <a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
-        </div><!-- /logo -->        
-                                    
-        <!-- Menu -->       
-        <div class="navbar">                                
-            <div class="navbar-inner">                                  
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a><!-- /nav-collapse -->                                  
-                <div class="nav-collapse collapse">                                     
-                    <ul class="nav top-2">
-                        <li class="active">
-                            <a href="./index.html">首页</a>                            
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">C/C++</a></li>
-                                <li><a href="./portfolio.html">C#</a></li>
-                                <li><a href="./portfolio.html">Objective-C</a></li>
-                                <li><a href="./portfolio.html">Java</a></li>
-                                <li><a href="./portfolio.html">Linux Shell</a></li>
-                                <li><a href="./portfolio.html">Python</a></li>
-                                <li><a href="./portfolio.html">Ruby</a></li> 
-                                <li><a href="./portfolio.html">数据结构</a></li>  
+	<div class="container"> 
+		<!-- Logo -->       
+		<div class="logo">                                             
+			<a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
+		</div><!-- /logo -->        
+
+		<!-- Menu -->       
+		<div class="navbar">                                
+			<div class="navbar-inner">                                  
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a><!-- /nav-collapse -->                                  
+				<div class="nav-collapse collapse">                                     
+					<ul class="nav top-2 loginbar1">
+						<li>
+						<a href="./index.html">首页</a>                            
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio.html">C/C++</a></li>														
+							<li><a href="./portfolio_java.html">Java</a></li>
+							<li><a href="./portfolio_shell.html">Shell</a></li>
+							<li><a href="./portfolio_python.html">Python</a></li>
+							<li><a href="./portfolio_ruby.html">Ruby</a></li> 						 
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio1.html">HTML5</a></li>
+							<li><a href="./portfolio1_css.html">CSS</a></li>
+							<li><a href="./portfolio1_js.html">Javascript</a></li>
+							<li><a href="./portfolio1_xml.html">XML</a></li>
+							<li><a href="./portfolio1_ajax.html">AJAX</a></li>							   
+							<li><a href="./portfolio1_php.html">PHP</a></li>   
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio2.html">数据库基础</a></li>
+                                <li><a href="./portfolio2_oracle.html">Oracle</a></li>
+                                <li><a href="./portfolio2_mysql.html">Mysql</a></li>
+                                <li><a href="./portfolio2_sqlserver.html">Sql Server</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">HTML5</a></li>
-                                <li><a href="./portfolio.html">CSS</a></li>
-                                <li><a href="./portfolio.html">Javascript</a></li>
-                                <li><a href="./portfolio.html">XML</a></li>
-                                <li><a href="./portfolio.html">AJAX</a></li>
-                                <li><a href="./portfolio.html">JQuery</a></li>                               
-                                <li><a href="./portfolio.html">PHP</a></li>
-                                <li><a href="./portfolio.html">JSP</a></li>
-                                <li><a href="./portfolio.html">ASP.NET</a></li>
-                                <li><a href="./portfolio.html">Web Service</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio3.html">iOS开发</a></li>
+                                <li><a href="./portfolio3_android.html">Android开发</a></li>
+                                <li><a href="./portfolio3_wp.html">Windows Phone开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">数据库基础</a></li>
-                                <li><a href="./portfolio.html">Oracle</a></li>
-                                <li><a href="./portfolio.html">Mysql</a></li>
-                                <li><a href="./portfolio.html">Sql Server</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio4.html">Windows开发</a></li>
+                                <li><a href="./portfolio4_osx.html">Mac OS X开发</a></li>
+                                <li><a href="./portfolio4_linux.html">Linux开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">iOS开发</a></li>
-                                <li><a href="./portfolio.html">Android开发</a></li>
-                                <li><a href="./portfolio.html">Windows Phone开发</a></li>                                
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">Windows</a></li>
-                                <li><a href="./portfolio.html">Mac OS X</a></li>
-                                <li><a href="./portfolio.html">Linux</a></li> 
-                                <li><a href="./portfolio.html">跨平台开发</a></li>
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="./blog.html">问答</a>                                                 
-                        </li>                        
-                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
-                    </ul>
-                    <div class="search-open">
-                        <div class="input-append">
-                            <form />
-                                <input type="text" class="span3" placeholder="Search" />
-                                <button type="submit" class="btn-u">Go</button>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- /nav-collapse -->                                
-            </div><!-- /navbar-inner -->
-        </div><!-- /navbar -->                          
-    </div><!-- /container -->               
-</div><!--/header -->      
+						<b class="caret-out"></b>                        
+						</li>
+						<li class="active">
+						<a href="./blog.html">问答</a>                                                 
+						</li>                        
+						<li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+					</ul>
+					<div class="search-open">
+						<div class="input-append">
+							<form />
+								<input type="text" class="span3" placeholder="Search" />
+								<button type="submit" class="btn-u">Go</button>
+							</form>
+						</div>
+					</div>
+				</div><!-- /nav-collapse -->                                
+			</div><!-- /navbar-inner -->
+		</div><!-- /navbar -->                          
+	</div><!-- /container -->               
+</div><!--/header -->        
 <!--=== End Header ===-->
 
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-40">
 	<div class="container">
-        <h1 class="color-green pull-left">Portfolio</h1>
+        <h1 class="color-green pull-left">C/C++</h1>
         <ul class="pull-right breadcrumb">
-            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-            <li class="active">Portfolio</li>
+            <li><a href="index.html">首页</a> <span class="divider">/</span></li>
+            <li class="active">编程基础</li>
         </ul>
     </div><!--/container-->
 </div><!--/breadcrumbs-->
@@ -179,20 +172,80 @@
         <div id="w">    
             <div class="sort" id="sort">
 				<ul class="unstyled inline">
-                	<li><a href="#" class="all selected">All</a></li>
-                	<li><a href="#" class="web">Web</a></li>
-                	<li><a href="#" class="ios">iOS</a></li>
-                	<li><a href="#" class="print">Print</a></li>
+                	<li><a href="#" class="all selected">All</a></li>                	
                 </ul>
             </div>
             
             <ul class="portfolio recent-work clearfix"> 
                 <li data-id="id-1" class="ios">
                     <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/35.jpg" alt="" /></em>
+                        <span>
+                            <strong>CodeIgniter表单验证</strong>
+                            <i>CodeIgniter表单验证的使用方法与优化</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-2" class="print">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/34.jpg" alt="" /></em>
+                        <span>
+                            <strong>CodeIgniter验证码</strong>
+                            <i>CodeIgniter自动生成验证码</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-3" class="ios">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/33.jpg" alt="" /></em>
+                        <span>
+                            <strong>ThinkPhp CAPTCHA 辅助函数</strong>
+                            <i>ThinkPhp CAPTCHA 辅助函数的使用方法</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-4" class="print">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/32.jpg" alt="" /></em>
+                        <span>
+                            <strong>Android调用Google Map接口</strong>
+                            <i>Android调用Google Map接口的方法</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-5" class="web">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/31.jpg" alt="" /></em>
+                        <span>
+                            <strong>CodeIgniter图像裁剪</strong>
+                            <i>CodeIgniter图像裁剪的特殊技巧</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-6" class="web">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/30.jpg" alt="" /></em>
+                        <span>
+                            <strong>CodeIgniter模板解析器</strong>
+                            <i>详解CodeIgniter模板解析器的工作原理</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-7" class="print">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/29.jpg" alt="" /></em>
+                        <span>
+                            <strong>java开发中常见的问题</strong>
+                            <i>java开发中常见的问题以及解决方法</i>
+                        </span>
+                    </a>
+                </li>
+                <li data-id="id-1" class="ios">
+                    <a href="portfolio_item.html">
                     	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/2.jpg" alt="" /></em>
                         <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
+                            <strong>CodeIgniter表单验证</strong>
+                            <i>CodeIgniter表单验证的使用方法与优化</i>
                         </span>
                     </a>
                 </li>
@@ -200,8 +253,8 @@
                     <a href="portfolio_item.html">
                     	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/3.jpg" alt="" /></em>
                         <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
+                            <strong>CodeIgniter验证码</strong>
+                            <i>CodeIgniter自动生成验证码</i>
                         </span>
                     </a>
                 </li>
@@ -209,8 +262,8 @@
                     <a href="portfolio_item.html">
                     	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/4.jpg" alt="" /></em>
                         <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
+                            <strong>ThinkPhp CAPTCHA 辅助函数</strong>
+                            <i>ThinkPhp CAPTCHA 辅助函数的使用方法</i>
                         </span>
                     </a>
                 </li>
@@ -218,17 +271,8 @@
                     <a href="portfolio_item.html">
                     	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/5.jpg" alt="" /></em>
                         <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-5" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/6.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
+                            <strong>Android调用Google Map接口</strong>
+                            <i>Android调用Google Map接口的方法</i>
                         </span>
                     </a>
                 </li>
@@ -236,89 +280,26 @@
                     <a href="portfolio_item.html">
                     	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/7.jpg" alt="" /></em>
                         <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
+                            <strong>CodeIgniter模板解析器</strong>
+                            <i>详解CodeIgniter模板解析器的工作原理</i>
+                        </span>
+                    </a>
+                </li>                
+                <li data-id="id-6" class="web">
+                    <a href="portfolio_item.html">
+                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/8.jpg" alt="" /></em>
+                        <span>
+                            <strong>CodeIgniter模板解析器</strong>
+                            <i>详解CodeIgniter模板解析器的工作原理</i>
                         </span>
                     </a>
                 </li>
                 <li data-id="id-7" class="print">
                     <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/8.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-8" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/2.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-9" class="ios">
-                    <a href="portfolio_item.html">
                     	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/9.jpg" alt="" /></em>
                         <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-10" class="ios">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/10.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-11" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/5.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-12" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/3.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-13" class="ios">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/6.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-14" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/9.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
-                        </span>
-                    </a>
-                </li>
-                <li data-id="id-15" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="assets/plugins/portfolioSorting/img/7.jpg" alt="" /></em>
-                        <span>
-                            <strong>Happy New Year</strong>
-                            <i>Anim pariatur cliche reprehenderit</i>
+                            <strong>java开发中常见的问题</strong>
+                            <i>java开发中常见的问题以及解决方法</i>
                         </span>
                     </a>
                 </li>
@@ -335,15 +316,15 @@
 			<div class="span4">
                 <!-- About -->
 		        <div class="headline"><h3>关于我们</h3></div>	
-				<p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>	
+				<p class="margin-bottom-25">微学是一个在线学习平台，主要提供IT技术的各难点讲解视频，用户可以在问答论坛中进行交流</p>	
 
 	            <!-- Monthly Newsletter -->
 		        <div class="headline"><h3>期刊订阅</h3></div>	
-				<p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+				<p>订阅我们的电子期刊，随时了解我们的最新动态和优惠信息！</p>
 				<form class="form-inline" />
 					<div class="input-append">
-						<input type="text" placeholder="Email Address" class="input-medium" />
-						<button class="btn-u">Subscribe</button>
+						<input type="text" placeholder="电子邮箱" class="input-medium" />
+						<button class="btn-u">订阅</button>
 					</div>
 				</form>							
 			</div><!--/span4-->	
@@ -354,19 +335,19 @@
                     <dl class="dl-horizontal">
                         <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Android 的提权 (Root) 原理是什么?</a></p> 
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                     <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Python与R不同，Python是一门多功能的语言。数据统计是更多是通过第三方包来实现的。</a></p> 
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                     <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Python 在数据分析工作中的地位与 R 语言、SAS、SPSS 比较如何？</a></p> 
                         </dd>
                     </dl>
                 </div>
@@ -376,11 +357,10 @@
 	            <!-- Monthly Newsletter -->
 		        <div class="headline"><h3>联系我们</h3></div>	
                 <address>
-					25, Lorem Lis Street, Orange <br />
-					California, US <br />
-					Phone: 800 123 3456 <br />
-					Fax: 800 123 3456 <br />
-					Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+					浙江省 杭州市 江干区<br />
+					六号大街新雁公寓14幢 <br />
+					联系电话: 400-12345678 <br />					
+					电子邮箱: <a href="mailto:info@anybiz.com" class="">info@weixue.com</a>
                 </address>
 
                 <!-- Stay Connected -->

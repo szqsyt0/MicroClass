@@ -26,6 +26,13 @@
 	font-family:'Open Sans', sans-serif;
 }
 
+.loginbar1 li a:hover {
+	color:#7c8082;
+	font-size:11px;
+	text-transform:uppercase;
+	font-family:'Open Sans', sans-serif;
+}
+
 .loginbar li.devider { 
 	top:-1px;
 	padding:0;
@@ -60,6 +67,10 @@
 	display:block; 
 }
 
+.loginbar1 li:hover ul { 
+	display:block; 
+}
+
 .loginbar li ul li { 
 	padding-bottom:0;
 	display:list-item;
@@ -86,6 +97,14 @@
 	background:#fafafa !important;
 }
 
+.loginbar1 li ul li a:hover, 
+.loginbar1 li ul li.active a {
+	opacity:1 !important;
+	color:#555 !important;
+	font-size:10px !important;
+	text-shadow:none !important;
+	background:#fafafa !important;
+}
 .loginbar li ul li.active i {
 	top:2px; 
 	right:-5px;
@@ -252,7 +271,7 @@
 	padding:0;
 	border:none;
 	margin-top:-2px; 
-	min-width:200px;
+	min-width:150px;
 	border-radius:0; 
 	border-top:solid 2px #72c02c; 
 	border-bottom:solid 2px #687074; 
@@ -270,11 +289,11 @@
 .dropdown-submenu:hover > a {
   color:#ffffff;
   background:#687074 !important;
-    -webkit-transition:all 0.2s ease-in-out;
-    -moz-transition:all 0.2s ease-in-out;
-    -o-transition:all 0.2s ease-in-out;
-    transition:all 0.2s ease-in-out;
-	filter:none !important;
+  -webkit-transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -o-transition:all 0.2s ease-in-out;
+  transition:all 0.2s ease-in-out;
+  filter:none !important;
 }
 
 .dropdown-menu .active > a {

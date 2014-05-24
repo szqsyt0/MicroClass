@@ -3,7 +3,7 @@
 
 /* sorting and filtering */
 .sort { display: block; font-family: 'Kite One', Arial, sans-serif; font-size: 1.4em; line-height: 0.9em; color: #444; }
-
+.sort ul { text-align:;}
 .sort li a { margin-right: 4px; padding: 0px 3px; text-decoration: none;}
 .sort li a:hover { color: #72c02c; text-decoration: none; border-bottom: 1px dotted #72c02c; }
 .sort li a.selected { color: #72c02c; border-bottom: 1px solid #72c02c; }

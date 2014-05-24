@@ -1,364 +1,309 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>首页－微学</title>
+<title>首页－微学</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
-    <!-- CSS Global Compulsory-->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/headers/header1.css" />
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="assets/css/style_responsive.css" />
-    <link rel="shortcut icon" href="favicon.ico" />        
-    <!-- CSS Implementing Plugins -->    
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css" type="text/css" media="screen" />  
-    <link rel="stylesheet" href="assets/plugins/revolution_slider/css/rs-style.css" media="screen" />
-    <link rel="stylesheet" href="assets/plugins/revolution_slider/rs-plugin/css/settings.css" media="screen" />    
-       
+<!-- CSS Global Compulsory-->
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/headers/header1.css" />
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="assets/css/style_responsive.css" />
+<link rel="shortcut icon" href="favicon.ico" />        
+<!-- CSS Implementing Plugins -->    
+<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css" type="text/css" media="screen" />  
+<link rel="stylesheet" href="assets/plugins/revolution_slider/css/rs-style.css" media="screen" />
+<link rel="stylesheet" href="assets/plugins/revolution_slider/rs-plugin/css/settings.css" media="screen" />    
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
 
 <body>
 <!--=== Top ===-->    
 <div class="top">
-    <div class="container">         
-        <ul class="loginbar pull-right">           
-            <li><a href="page_login.html" class="login-btn">登录</a></li>  
-            <li class="devider">&nbsp;</li>
-            <li>
-                <a href="#" class="login-btn dropdown-toggle" data-toggle="dropdown">我的微学</a>
-                
-                <ul class="dropdown-menu">
-                                <li><a href="#">我的收藏</a></li>
-                                <li><a href="#">我的笔记</a></li>
-                                <li><a href="#">我的问答</a></li>
-                                <li><a href="#">播放记录</a></li>                                
-                                <li><a href="#">退出</a></li>                                                              
-                </ul>
-            </li>     
-            <li class="devider">&nbsp;</li>
-            <li><a href="page_faq.html" class="login-btn">帮助</a></li>   
-        </ul>
-    </div>      
+	<div class="container">         
+		<ul class="loginbar pull-right">           
+			<li><a href="page_login.html" class="login-btn">登录</a> / <a href="page_registration.html" class="login-btn">注册</a></li>  
+			<li class="devider">&nbsp;</li>	    
+			<li>
+			<a href="micro_study.html">我的微学</a>
+
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="micro_study.html">我的收藏</a></li>
+				<li><a href="micro_study1.html">我的笔记</a></li>
+				<li><a href="micro_study2.html">我的问答</a></li>
+				<li><a href="micro_study3.html">播放记录</a></li>     
+				<li><a href="#">退出</a></li>        
+			</ul>
+			</li>     
+			<li class="devider">&nbsp;</li>
+			<li><a href="page_faq.html" class="login-btn">帮助</a></li>   
+		</ul>
+	</div>      
 </div><!--/top-->
 <!--=== End Top ===-->    
 
 <!--=== Header ===-->
 <div class="header">               
-    <div class="container"> 
-        <!-- Logo -->       
-        <div class="logo">                                             
-            <a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
-        </div><!-- /logo -->        
-                                    
-        <!-- Menu -->       
-        <div class="navbar">                                
-            <div class="navbar-inner">                                  
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a><!-- /nav-collapse -->                                  
-                <div class="nav-collapse collapse">                                     
-                    <ul class="nav top-2">
-                        <li class="active">
-                            <a href="./index.html">首页</a>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">编程基础
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">C/C++</a></li>
-                                <li><a href="./portfolio.html">C#</a></li>
-                                <li><a href="./portfolio.html">Objective-C</a></li>
-                                <li><a href="./portfolio.html">Java</a></li>
-                                <li><a href="./portfolio.html">Linux Shell</a></li>
-                                <li><a href="./portfolio.html">Python</a></li>
-                                <li><a href="./portfolio.html">Ruby</a></li> 
-                                <li><a href="./portfolio.html">数据结构</a></li>  
+	<div class="container"> 
+		<!-- Logo -->       
+		<div class="logo">                                             
+			<a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
+		</div><!-- /logo -->        
+
+		<!-- Menu -->       
+		<div class="navbar">                                
+			<div class="navbar-inner">                                  
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a><!-- /nav-collapse -->                                  
+				<div class="nav-collapse collapse">                                     
+					<ul class="nav top-2 loginbar1">
+						<li>
+						<a href="./index.html">首页</a>                            
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio.html">C/C++</a></li>														
+							<li><a href="./portfolio_java.html">Java</a></li>
+							<li><a href="./portfolio_shell.html">Shell</a></li>
+							<li><a href="./portfolio_python.html">Python</a></li>
+							<li><a href="./portfolio_ruby.html">Ruby</a></li> 						 
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio1.html">HTML5</a></li>
+							<li><a href="./portfolio1_css.html">CSS</a></li>
+							<li><a href="./portfolio1_js.html">Javascript</a></li>
+							<li><a href="./portfolio1_xml.html">XML</a></li>
+							<li><a href="./portfolio1_ajax.html">AJAX</a></li>							   
+							<li><a href="./portfolio1_php.html">PHP</a></li>   
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio2.html">数据库基础</a></li>
+                                <li><a href="./portfolio2_oracle.html">Oracle</a></li>
+                                <li><a href="./portfolio2_mysql.html">Mysql</a></li>
+                                <li><a href="./portfolio2_sqlserver.html">Sql Server</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">HTML5</a></li>
-                                <li><a href="./portfolio.html">CSS</a></li>
-                                <li><a href="./portfolio.html">Javascript</a></li>
-                                <li><a href="./portfolio.html">XML</a></li>
-                                <li><a href="./portfolio.html">AJAX</a></li>
-                                <li><a href="./portfolio.html">JQuery</a></li>                               
-                                <li><a href="./portfolio.html">PHP</a></li>
-                                <li><a href="./portfolio.html">JSP</a></li>
-                                <li><a href="./portfolio.html">ASP.NET</a></li>
-                                <li><a href="./portfolio.html">Web Service</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio3.html">iOS开发</a></li>
+                                <li><a href="./portfolio3_android.html">Android开发</a></li>
+                                <li><a href="./portfolio3_wp.html">Windows Phone开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据库开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">数据库基础</a></li>
-                                <li><a href="./portfolio.html">Oracle</a></li>
-                                <li><a href="./portfolio.html">Mysql</a></li>
-                                <li><a href="./portfolio.html">Sql Server</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio4.html">Windows开发</a></li>
+                                <li><a href="./portfolio4_osx.html">Mac OS X开发</a></li>
+                                <li><a href="./portfolio4_linux.html">Linux开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">iOS开发</a></li>
-                                <li><a href="./portfolio.html">Android开发</a></li>
-                                <li><a href="./portfolio.html">Windows Phone开发</a></li>                                
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">Windows</a></li>
-                                <li><a href="./portfolio.html">Mac OS X</a></li>
-                                <li><a href="./portfolio.html">Linux</a></li> 
-                                <li><a href="./portfolio.html">跨平台开发</a></li>
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="./blog.html">问答</a>                   
-                        </li>                        
-                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
-                    </ul>
-                    <div class="search-open">
-                        <div class="input-append">
-                            <form />
-                                <input type="text" class="span3" placeholder="Search" />
-                                <button type="submit" class="btn-u">Go</button>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- /nav-collapse -->                                
-            </div><!-- /navbar-inner -->
-        </div><!-- /navbar -->                          
-    </div><!-- /container -->               
-</div><!--/header -->      
+						<b class="caret-out"></b>                        
+						</li>
+						<li class="active">
+						<a href="./blog.html">问答</a>                                                 
+						</li>                        
+						<li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+					</ul>
+					<div class="search-open">
+						<div class="input-append">
+							<form />
+								<input type="text" class="span3" placeholder="Search" />
+								<button type="submit" class="btn-u">Go</button>
+							</form>
+						</div>
+					</div>
+				</div><!-- /nav-collapse -->                                
+			</div><!-- /navbar-inner -->
+		</div><!-- /navbar -->                          
+	</div><!-- /container -->               
+</div><!--/header -->     
 <!--=== End Header ===-->
 
 <!--=== Slider ===-->
 <div class="fullwidthbanner-container">
-    <div class="fullwidthabnner">
-        <ul>
-            <!-- THE FIRST SLIDE -->
-            <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb1.jpg">
+	<div class="fullwidthabnner">
+		<ul>
+			<!-- THE FIRST SLIDE -->
+			<li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb1.jpg">
 
-                <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                <img src="assets/img/sliders/revolution/bg1.jpg" />
+			<!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+			<img src="assets/img/sliders/revolution/bg1.jpg" />
 
-                <div class="caption large_text sfb bg-black-opacity" data-x="176" data-y="12" data-speed="300" data-start="800" data-easing="easeOutExpo">
-                     OVER 
-                     <span style="color: #ffcc00;">1000</span> 
-                     SATISFIED CUSTOMERS
-                </div>
+			<!-- 
+			<div class="caption large_text sfb bg-black-opacity" data-x="176" data-y="12" data-speed="300" data-start="800" data-easing="easeOutExpo">
+				本站包含 
+				<span style="color: #ffcc00;">100</span> 
+				个知识点
+			</div>
+			-->
 
-                <div class="caption randomrotate" data-x="189" data-y="76" data-speed="600" data-start="1100" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p1.jpg" alt="Image 2" />
-                </div>
+			<div class="caption randomrotate" data-x="189" data-y="76" data-speed="600" data-start="1100" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p1.jpg" alt="Image 2" />
+			</div>
 
-                <div class="caption randomrotate" data-x="0" data-y="92" data-speed="600" data-start="1200" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p2.jpg" alt="Image 3" />
-                </div>
+			<div class="caption randomrotate" data-x="0" data-y="92" data-speed="600" data-start="1200" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p2.jpg" alt="Image 3" />
+			</div>
 
-                <div class="caption randomrotate" data-x="200" data-y="209" data-speed="600" data-start="1300" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p6.jpg" alt="Image 4" />
-                </div>
+			<div class="caption randomrotate" data-x="200" data-y="209" data-speed="600" data-start="1300" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p6.jpg" alt="Image 4" />
+			</div>
 
-                <div class="caption randomrotate" data-x="97" data-y="117" data-speed="300" data-start="1400" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p4.jpg" alt="Image 5" />
-                </div>
+			<div class="caption randomrotate" data-x="97" data-y="117" data-speed="300" data-start="1400" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p4.jpg" alt="Image 5" />
+			</div>
 
-                <div class="caption randomrotate" data-x="14" data-y="222" data-speed="600" data-start="1500" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p5.jpg" alt="Image 6" />
-                </div>
+			<div class="caption randomrotate" data-x="14" data-y="222" data-speed="600" data-start="1500" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p5.jpg" alt="Image 6" />
+			</div>
 
-                <div class="caption randomrotate" data-x="638" data-y="201" data-speed="300" data-start="1600" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p3.jpg" alt="Image 7" />
-                </div>
+			<div class="caption randomrotate" data-x="638" data-y="201" data-speed="300" data-start="1600" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p3.jpg" alt="Image 7" />
+			</div>
 
-                <div class="caption randomrotate" data-x="717" data-y="294" data-speed="300" data-start="1700" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p4.jpg" alt="Image 8" />
-                </div>
+			<div class="caption randomrotate" data-x="717" data-y="294" data-speed="300" data-start="1700" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p4.jpg" alt="Image 8" />
+			</div>
 
-                <div class="caption randomrotate" data-x="682" data-y="79" data-speed="300" data-start="1800" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p8.jpg" alt="Image 9" />
-                </div>
+			<div class="caption randomrotate" data-x="682" data-y="79" data-speed="300" data-start="1800" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p8.jpg" alt="Image 9" />
+			</div>
 
-                <div class="caption randomrotate" data-x="807" data-y="71" data-speed="300" data-start="1900" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p10.jpg" alt="Image 10" />
-                </div>
+			<div class="caption randomrotate" data-x="807" data-y="71" data-speed="300" data-start="1900" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p10.jpg" alt="Image 10" />
+			</div>
 
-                <div class="caption randomrotate" data-x="818" data-y="271" data-speed="300" data-start="2000" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p5.jpg" alt="Image 11" />
-                </div>
+			<div class="caption randomrotate" data-x="818" data-y="271" data-speed="300" data-start="2000" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p5.jpg" alt="Image 11" />
+			</div>
 
-                <div class="caption randomrotate" data-x="95" data-y="248" data-speed="300" data-start="2100" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p9.jpg" alt="Image 12" />
-                </div>
+			<div class="caption randomrotate" data-x="95" data-y="248" data-speed="300" data-start="2100" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p9.jpg" alt="Image 12" />
+			</div>
 
-                <div class="caption randomrotate" data-x="762" data-y="165" data-speed="300" data-start="2200" data-easing="easeOutExpo">
-                     <img class="img-border" src="assets/img/sliders/revolution/p7.jpg" alt="Image 13" />
-                </div>
-            </li>
+			<div class="caption randomrotate" data-x="762" data-y="165" data-speed="300" data-start="2200" data-easing="easeOutExpo">
+				<img class="img-border" src="assets/img/sliders/revolution/p7.jpg" alt="Image 13" />
+			</div>
+			</li>
 
-            <!-- THE SECOND SLIDE -->
-            <li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-delay="9400" data-thumb="assets/img/sliders/revolution/thumbs/thumb2.jpg">
 
-                <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->                                               
-                <img src="assets/img/sliders/revolution/bg2.jpg" />
+			<!-- THE THIRD SLIDE -->
+			<li data-transition="slideleft" data-slotamount="1" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
 
-                <div class="caption very_big_white lfl stl" data-x="18" data-y="343" data-speed="300" data-start="500" data-easing="easeOutExpo" data-end="8800" data-endspeed="300" data-endeasing="easeInSine">
-                     TIMELINED CAPTIONS
-                </div>
+			<!-- THE MAIN IMAGE IN THE THIRD SLIDE -->                    
+			<img src="assets/img/sliders/revolution/bg3.jpg" />
 
-                <div class="caption big_white lfl stl" data-x="18" data-y="390" data-speed="300" data-start="800" data-easing="easeOutExpo" data-end="9100" data-endspeed="300" data-endeasing="easeInSine">
-                     MOVE CAPTIONS IN AND OUT ON ONE SLIDE
-                </div>
+			<div class="caption large_text sft" data-x="10" data-y="44" data-speed="300" data-start="800" data-easing="easeOutExpo">
+				无论PC、平板、手机
+			</div>
 
-                <div class="caption lft ltb" data-x="600" data-y="0" data-speed="600" data-start="1100" data-easing="easeOutExpo" data-end="3100" data-endspeed="600" data-endeasing="easeInSine">
-                     <img src="assets/img/sliders/revolution/drink2.jpg" alt="Image 3" />
-                </div>
+			<div class="caption medium_text sfl" data-x="39" data-y="82" data-speed="300" data-start="1100" data-easing="easeOutExpo">
+				都可访问
+			</div>
 
-                <div class="caption bold_green_text sft stb" data-x="760" data-y="290" data-speed="300" data-start="1400" data-easing="easeOutExpo" data-end="3300" data-endspeed="300" data-endeasing="easeInSine">
-                     PRADA
-                </div>
+			<div class="caption large_text sfr" data-x="129" data-y="78" data-speed="300" data-start="1100" data-easing="easeOutExpo">
+				<span style="color: #72c02c;">微学网</span>
+			</div>
 
-                <div class="caption big_black sfb stb" data-x="780" data-y="320" data-speed="300" data-start="1700" data-easing="easeOutExpo" data-end="3200" data-endspeed="300" data-endeasing="easeInSine">
-                     $ 128
-                </div>
+			<div class="caption lfl" data-x="10" data-y="150" data-speed="800" data-start="900" data-easing="easeOutExpo">
+				<img src="assets/img/sliders/revolution/imac.png" alt="Image 4" />
+			</div>
 
-                <div class="caption lft ltb" data-x="600" data-y="0" data-speed="600" data-start="3600" data-easing="easeOutExpo" data-end="5600" data-endspeed="600" data-endeasing="easeInSine">
-                     <img src="assets/img/sliders/revolution/drink1.jpg" alt="Image 6" />
-                </div>
+			<div class="caption lfl" data-x="210" data-y="245" data-speed="600" data-start="1000" data-easing="easeOutExpo">
+				<img src="assets/img/sliders/revolution/ipad.png" alt="Image 5" />
+			</div>
 
-                <div class="caption bold_brown_text sft stb" data-x="760" data-y="290" data-speed="300" data-start="3900" data-easing="easeOutExpo" data-end="5800" data-endspeed="300" data-endeasing="easeInSine">
-                     Dolce & Gabbana
-                </div>
+			<div class="caption lfl" data-x="322" data-y="313" data-speed="400" data-start="1100" data-easing="easeOutExpo">
+				<img src="assets/img/sliders/revolution/iphone.png" alt="Image 6" />
+			</div>
 
-                <div class="caption big_black sfb stb" data-x="780" data-y="320" data-speed="300" data-start="4200" data-easing="easeOutExpo" data-end="5700" data-endspeed="300" data-endeasing="easeInSine">
-                     $ 116
-                </div>
+			<div class="caption lft" data-x="500" data-y="130" data-speed="300" data-start="500" data-easing="easeOutExpo">
+				<img src="assets/img/sliders/revolution/html5andcss3.png" alt="Image 6" />
+			</div>
+			</li>
 
-                <div class="caption lft ltb" data-x="600" data-y="0" data-speed="600" data-start="6100" data-easing="easeOutExpo" data-end="8100" data-endspeed="300" data-endeasing="easeInSine">
-                     <img src="assets/img/sliders/revolution/drink3.jpg" alt="Image 9" />
-                </div>
+			<!-- THE FOURTH SLIDE -->
+			<li data-transition="flyin" data-slotamount="1" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
 
-                <div class="caption bold_red_text sft stb" data-x="760" data-y="290" data-speed="300" data-start="6400" data-easing="easeOutExpo" data-end="8300" data-endspeed="300" data-endeasing="easeInSine">
-                     L'EAU DE CHLOE
-                </div>
+			<!-- THE MAIN IMAGE IN THE FOURTH SLIDE -->     
+			<img src="assets/img/sliders/revolution/bg4.jpg" />
 
-                <div class="caption big_black sfb stb" data-x="780" data-y="320" data-speed="300" data-start="6700" data-easing="easeOutExpo" data-end="8200" data-endspeed="300" data-endeasing="easeInSine">
-                     $ 142
-                </div>
-            </li>
+			<div class="caption lfb boxshadow" data-x="0" data-y="120" data-speed="900" data-start="500" data-easing="easeOutBack">
 
-            <!-- THE THIRD SLIDE -->
-            <li data-transition="slideleft" data-slotamount="1" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
+			</div>
 
-                <!-- THE MAIN IMAGE IN THE THIRD SLIDE -->                                               
-                <img src="assets/img/sliders/revolution/bg3.jpg" />
+			<div class="caption sft big_black" data-x="550" data-y="120" data-speed="300" data-start="1200" data-easing="easeOutExpo">
+				Video Support
+			</div>
 
-                <div class="caption large_text sft" data-x="10" data-y="44" data-speed="300" data-start="800" data-easing="easeOutExpo">
-                     TOUCH ENABLED
-                </div>
+			<div class="caption sft big_white" data-x="550" data-y="162" data-speed="300" data-start="1300" data-easing="easeOutExpo">
+				Vimeo Example
+			</div>
 
-                <div class="caption medium_text sfl" data-x="39" data-y="82" data-speed="300" data-start="1100" data-easing="easeOutExpo">
-                     AND
-                </div>
+			<div class="caption lfb medium_grey" data-x="550" data-y="215" data-speed="300" data-start="1400" data-easing="easeOutExpo">
+				You can easily add
+			</div>
 
-                <div class="caption large_text sfr" data-x="88" data-y="78" data-speed="300" data-start="1100" data-easing="easeOutExpo">
-                     <span style="color: #72c02c;">RESPONSIVE</span>
-                </div>
+			<div class="caption lfb medium_grey" data-x="550" data-y="240" data-speed="300" data-start="1500" data-easing="easeOutExpo">   
+				Vimeo & Youtube Videos
+			</div>
 
-                <div class="caption lfl" data-x="10" data-y="150" data-speed="800" data-start="900" data-easing="easeOutExpo">
-                     <img src="assets/img/sliders/revolution/imac.png" alt="Image 4" />
-                </div>
+			<div class="caption lfb medium_grey" data-x="550" data-y="265" data-speed="300" data-start="1600" data-easing="easeOutExpo">
+				to your Slides
+			</div>
+			</li>
+		</ul>
 
-                <div class="caption lfl" data-x="210" data-y="245" data-speed="600" data-start="1000" data-easing="easeOutExpo">
-                     <img src="assets/img/sliders/revolution/ipad.png" alt="Image 5" />
-                </div>
-
-                <div class="caption lfl" data-x="322" data-y="313" data-speed="400" data-start="1100" data-easing="easeOutExpo">
-                     <img src="assets/img/sliders/revolution/iphone.png" alt="Image 6" />
-                </div>
-
-                <div class="caption lft" data-x="500" data-y="130" data-speed="300" data-start="500" data-easing="easeOutExpo">
-                     <img src="assets/img/sliders/revolution/html5andcss3.png" alt="Image 6" />
-                </div>
-            </li>
-
-            <!-- THE FOURTH SLIDE -->
-            <li data-transition="flyin" data-slotamount="1" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
-                
-                <!-- THE MAIN IMAGE IN THE FOURTH SLIDE -->                                
-                <img src="assets/img/sliders/revolution/bg4.jpg" />
-
-                <div class="caption lfb boxshadow" data-x="0" data-y="120" data-speed="900" data-start="500" data-easing="easeOutBack">
-                     
-                </div>
-
-                <div class="caption sft big_black" data-x="550" data-y="120" data-speed="300" data-start="1200" data-easing="easeOutExpo">
-                     Video Support
-                </div>
-                
-                <div class="caption sft big_white" data-x="550" data-y="162" data-speed="300" data-start="1300" data-easing="easeOutExpo">
-                     Vimeo Example
-                </div>
-                
-                <div class="caption lfb medium_grey" data-x="550" data-y="215" data-speed="300" data-start="1400" data-easing="easeOutExpo">
-                     You can easily add
-                </div>
-                
-                <div class="caption lfb medium_grey" data-x="550" data-y="240" data-speed="300" data-start="1500" data-easing="easeOutExpo">   
-                     Vimeo & Youtube Videos
-                </div>
-                
-                <div class="caption lfb medium_grey" data-x="550" data-y="265" data-speed="300" data-start="1600" data-easing="easeOutExpo">
-                     to your Slides
-                </div>
-            </li>
-        </ul>
-
-        <div class="tp-bannertimer tp-bottom"></div>
-    </div>
+		<div class="tp-bannertimer tp-bottom"></div>
+	</div>
 </div>
 <!--=== End Slider ===-->
 
 <!--=== Purchase Block ===-->
 <div class="row-fluid purchase margin-bottom-30">
-    <div class="container">
+	<div class="container">
 		<div class="span9">
-            <span></span>
-            <p></p>
-        </div>
-        
-    </div>
+			<span></span>
+			<p></p>
+		</div>
+
+	</div>
 </div><!--/row-fluid-->
 <!-- End Purchase Block -->
 
@@ -366,174 +311,174 @@
 <div class="container">	
 	<!-- Service Blocks -->
 	<div class="row-fluid">
-    	<div class="span4">
-    		<div class="service clearfix">
-                <i class="icon-resize-small"></i>
-    			<div class="desc">
-    				<h4>笔记</h4>
-                    <p>同样在学习，但是有的人却能将积累的经验转化为成果，变成自己的能力，有的人却不能。善于总结和积累的人，可以讲经验转化为丰富的资历，他们离成功更近一步！</p>
-    			</div>
-    		</div>	
-    	</div>
-    	<div class="span4">
-    		<div class="service clearfix">
-                <i class="icon-cogs"></i>
-    			<div class="desc">
-    				<h4>录制</h4>
-                    <p>对某个问题有独到的见解？在某种技术上有新的突破？录制下来吧，分享给别人，你可以获得无与伦比的成就感。在微学，每个人都可以是优秀的老师！</p>
-    			</div>
-    		</div>	
-    	</div>
-    	<div class="span4">
-    		<div class="service clearfix">
-                <i class="icon-plane"></i>
-    			<div class="desc">
-    				<h4>问答</h4>
-                    <p>在问答，你可以与大量优秀的开发者交流，如果你在学习过程中有任何疑问，都可以在问答获得帮助。我们更希望你在获取知识的同时也能帮助其他人，问答期待你的加入！</p>
-    			</div>
-    		</div>	
-    	</div>			    
+            <a href="./micro_study1.html"><div class="span4">
+			<div class="service clearfix">
+				<i class="icon-resize-small"></i>
+				<div class="desc">
+					<h4>笔记</h4>
+					<p>同样在学习，但是有的人却能将积累的经验转化为成果，变成自己的能力，有的人却不能。善于总结和积累的人，可以讲经验转化为丰富的资历，他们离成功更近一步！</p>
+				</div>
+			</div>	
+                </div></a>
+		<a href="./page_faq.html"><div class="span4">
+			<div class="service clearfix">
+				<i class="icon-cogs"></i>
+				<div class="desc">
+					<h4>录制</h4>
+					<p>对某个问题有独到的见解？在某种技术上有新的突破？录制下来吧，分享给别人，你可以获得无与伦比的成就感。在微学，每个人都可以是优秀的老师！</p>
+				</div>
+			</div>	
+                    </div></a>
+		<a href="./blog.html"><div class="span4">
+			<div class="service clearfix">
+				<i class="icon-plane"></i>
+				<div class="desc">
+					<h4>问答</h4>
+					<p>在问答，你可以与大量优秀的开发者交流，如果你在学习过程中有任何疑问，都可以在问答获得帮助。我们更希望你在获取知识的同时也能帮助其他人，问答期待你的加入！</p>
+				</div>
+			</div>	
+                    </div></a>		    
 	</div><!--/row-fluid-->
 	<!-- //End Service Blokcs -->
 
 	<!-- 热门视频 -->
 	<div class="headline"><h3>热门视频</h3></div>
-    <ul class="thumbnails">
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/2.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Our Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/3.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">One More Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/9.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Another Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/10.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Huge Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-    </ul><!--/thumbnails-->
+	<ul class="thumbnails">
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/2.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">Bootstrap简介</a></h3>
+			<p>Bootstrap简介与初步学习</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/3.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">CodeIgniter表单验证</a></h3>
+			<p>CodeIgniter表单验证的使用方法与优化</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/9.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">CodeIgniter验证码</a></h3>
+			<p>CodeIgniter自动生成验证码</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/10.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">CAPTCHA 辅助函数</a></h3>
+			<p>ThinkPhp CAPTCHA 辅助函数的使用方法</p>
+		</div>
+		</li>
+	</ul><!--/thumbnails-->
 	<!-- //End 热门视频 -->
-    
-        <!--最新上传-->
-        <div class="headline"><h3>最新上传</h3></div>
-    <ul class="thumbnails">
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/2.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Our Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/3.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">One More Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/9.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Another Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/10.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Huge Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-    </ul><!--/thumbnails-->
-        <!--//End 最新上传-->
-        
-        <!--猜你喜欢-->
-        <div class="headline"><h3>猜你喜欢</h3></div>
-    <ul class="thumbnails">
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/2.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Our Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/3.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">One More Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/9.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Another Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-            	<div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="assets/img/carousel/10.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
-                </div>
-                <h3><a class="hover-effect" href="./portfolio_item.html">Huge Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-    </ul><!--/thumbnails-->
-        <!--//End 猜你喜欢-->
-        
+
+	<!--最新上传-->
+	<div class="headline"><h3>最新上传</h3></div>
+	<ul class="thumbnails">
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/11.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">PHP流程控制</a></h3>
+			<p>PHP流程控制中容易产生的错误</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/12.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">HTML5定位API接口开发</a></h3>
+			<p>本讲主要介绍地理位置定位的几种基本方式</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/13.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">HTML5桌面提醒功能API</a></h3>
+			<p>桌面通知功能能够让浏览器将消息通知给用户</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/14.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">HTML5图像动画的实现</a></h3>
+			<p>如何使用HTML5 Canvas实现优美的图像动画</p>
+		</div>
+		</li>
+	</ul><!--/thumbnails-->
+	<!--//End 最新上传-->
+
+	<!--猜你喜欢-->
+	<div class="headline"><h3>猜你喜欢</h3></div>
+	<ul class="thumbnails">
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/15.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">LINUX目录结构</a></h3>
+			<p>介绍了Linux操作系统的基本目录结构</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/16.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">C++实现链表排序</a></h3>
+			<p>C++实现链表排序的几种方法</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/17.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">文本编辑器VIM的使用</a></h3>
+			<p>LINUX下文本编辑器VIM的初级使用</p>
+		</div>
+		</li>
+		<li class="span3">
+		<div class="thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden"><img src="assets/img/carousel/18.jpg" alt="" /></div>
+				<a class="btn-more hover-effect" href="./portfolio_item.html">观看</a>					
+			</div>
+			<h3><a class="hover-effect" href="./portfolio_item.html">thinkphp模版布局方式</a></h3>
+			<p>介绍了Thinkphp3.1.2中的模版布局方式</p>
+		</div>
+		</li>
+	</ul><!--/thumbnails-->
+	<!--//End 猜你喜欢-->
+
 </div><!--/container-->		
 <!-- End Content Part -->
 
@@ -542,67 +487,66 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span4">
-                <!-- About -->
-		        <div class="headline"><h3>关于我们</h3></div>	
-				<p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>	
+				<!-- About -->
+				<div class="headline"><h3>关于我们</h3></div>	
+				<p class="margin-bottom-25">微学是一个在线学习平台，主要提供IT技术的各难点讲解视频，用户可以在问答论坛中进行交流</p>	
 
-	            <!-- Monthly Newsletter -->
-		        <div class="headline"><h3>期刊订阅</h3></div>	
-				<p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+				<!-- Monthly Newsletter -->
+				<div class="headline"><h3>期刊订阅</h3></div>	
+				<p>订阅我们的电子期刊，随时了解我们的最新动态和优惠信息！</p>
 				<form class="form-inline" />
 					<div class="input-append">
-						<input type="text" placeholder="Email Address" class="input-medium" />
-						<button class="btn-u">Subscribe</button>
+						<input type="text" placeholder="电子邮箱" class="input-medium" />
+						<button class="btn-u">订阅</button>
 					</div>
 				</form>							
 			</div><!--/span4-->	
-			
+
 			<div class="span4">
-                <div class="posts">
-                    <div class="headline"><h3>问答动态</h3></div>
-                    <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                        </dd>
-                    </dl>
-                </div>
+				<div class="posts">
+					<div class="headline"><h3>问答动态</h3></div>
+					<dl class="dl-horizontal">
+						<dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+						<dd>
+						<p><a href="#">Android 的提权 (Root) 原理是什么?</a></p> 
+						</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
+						<dd>
+						<p><a href="#">Python与R不同，Python是一门多功能的语言。数据统计是更多是通过第三方包来实现的。</a></p> 
+						</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
+						<dd>
+						<p><a href="#">Python 在数据分析工作中的地位与 R 语言、SAS、SPSS 比较如何？</a></p> 
+						</dd>
+					</dl>
+				</div>
 			</div><!--/span4-->
 
 			<div class="span4">
-	            <!-- Monthly Newsletter -->
-		        <div class="headline"><h3>联系我们</h3></div>	
-                <address>
-					25, Lorem Lis Street, Orange <br />
-					California, US <br />
-					Phone: 800 123 3456 <br />
-					Fax: 800 123 3456 <br />
-					Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
-                </address>
+				<!-- Monthly Newsletter -->
+				<div class="headline"><h3>联系我们</h3></div>	
+				<address>
+					浙江省 杭州市 江干区<br />
+					六号大街新雁公寓14幢 <br />
+					联系电话: 400-12345678 <br />					
+					电子邮箱: <a href="mailto:info@anybiz.com" class="">info@weixue.com</a>
+				</address>
 
-                <!-- Stay Connected -->
-		        <div class="headline"><h3>分享一下</h3></div>	
-                <ul class="social-icons">
-                    <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
-                    <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
-                    <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
-                    <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
-                    <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
-                    <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
-                    <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
-                </ul>
+				<!-- Stay Connected -->
+				<div class="headline"><h3>分享一下</h3></div>	
+				<ul class="social-icons">
+					<li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+					<li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+					<li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+					<li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+					<li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+					<li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+					<li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+				</ul>
 			</div><!--/span4-->
 		</div><!--/row-fluid-->	
 	</div><!--/container-->	
@@ -614,7 +558,7 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span8">						
-	            <p>Copyright &copy; 2014 微学</p>
+				<p>Copyright &copy; 2014 微学</p>
 			</div>
 			<div class="span4">	
 				<a href="index.html"><img id="logo-footer" src="assets/img/logo2-default.png" class="pull-right" alt="" /></a>
@@ -637,11 +581,11 @@
 <script type="text/javascript" src="assets/js/app.js"></script>
 <script type="text/javascript" src="assets/js/pages/index.js"></script>
 <script type="text/javascript">
-    jQuery(document).ready(function() {
-      	App.init();
-        App.initSliders();
-        Index.initRevolutionSlider();        
-    });
+jQuery(document).ready(function() {
+		App.init();
+		App.initSliders();
+		Index.initRevolutionSlider();        
+		});
 </script>
 <!--[if lt IE 9]>
     <script src="assets/js/respond.js"></script>

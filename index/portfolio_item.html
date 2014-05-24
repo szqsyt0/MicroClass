@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -18,27 +18,27 @@
     <link rel="stylesheet" href="assets/css/headers/header1.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" href="assets/css/style_responsive.css" />
-    <link rel="shortcut icon" href="favicon.ico" />        
+    <link rel="shortcut icon" href="favicon.ico" />           
     <!-- CSS Implementing Plugins -->    
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="assets/plugins/bxslider/jquery.bxslider.css" />        
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+    <link rel="stylesheet" href="assets/plugins/bxslider/jquery.bxslider.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
 <body>
 <!--=== Top ===-->    
 <div class="top">
     <div class="container">         
         <ul class="loginbar pull-right">           
-            <li><a href="page_login.html" class="login-btn">登录</a></li>  
+             <li><a href="page_login.html" class="login-btn">登录</a> / <a href="page_registration.html" class="login-btn">注册</a></li>   
             <li class="devider">&nbsp;</li>
             <li>
-                <a href="#" class="login-btn dropdown-toggle" data-toggle="dropdown">我的微学</a>
+                <a href="micro_study.html">我的微学</a>
                 
-                <ul class="dropdown-menu">
-                                <li><a href="#">我的收藏</a></li>
-                                <li><a href="#">我的笔记</a></li>
-                                <li><a href="#">我的问答</a></li>
-                                <li><a href="#">播放记录</a></li>                                
+                <ul class="nav-list">
+                                <li><a href="micro_study.html">我的收藏</a></li>
+                                <li><a href="micro_study1.html">我的笔记</a></li>
+                                <li><a href="micro_study2.html">我的问答</a></li>
+                                <li><a href="micro_study3.html">播放记录</a></li>                                
                                 <li><a href="#">退出</a></li>                                                              
                 </ul>
             </li>     
@@ -51,117 +51,109 @@
 
 <!--=== Header ===-->
 <div class="header">               
-    <div class="container"> 
-        <!-- Logo -->       
-        <div class="logo">                                             
-            <a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
-        </div><!-- /logo -->        
-                                    
-        <!-- Menu -->       
-        <div class="navbar">                                
-            <div class="navbar-inner">                                  
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a><!-- /nav-collapse -->                                  
-                <div class="nav-collapse collapse">                                     
-                    <ul class="nav top-2">
-                        <li>
-                            <a href="./index.html">首页</a>                            
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">C/C++</a></li>
-                                <li><a href="./portfolio.html">C#</a></li>
-                                <li><a href="./portfolio.html">Objective-C</a></li>
-                                <li><a href="./portfolio.html">Java</a></li>
-                                <li><a href="./portfolio.html">Linux Shell</a></li>
-                                <li><a href="./portfolio.html">Python</a></li>
-                                <li><a href="./portfolio.html">Ruby</a></li> 
-                                <li><a href="./portfolio.html">数据结构</a></li>  
+	<div class="container"> 
+		<!-- Logo -->       
+		<div class="logo">                                             
+			<a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
+		</div><!-- /logo -->        
+
+		<!-- Menu -->       
+		<div class="navbar">                                
+			<div class="navbar-inner">                                  
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a><!-- /nav-collapse -->                                  
+				<div class="nav-collapse collapse">                                     
+					<ul class="nav top-2 loginbar1">
+						<li>
+						<a href="./index.html">首页</a>                            
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio.html">C/C++</a></li>														
+							<li><a href="./portfolio_java.html">Java</a></li>
+							<li><a href="./portfolio_shell.html">Shell</a></li>
+							<li><a href="./portfolio_python.html">Python</a></li>
+							<li><a href="./portfolio_ruby.html">Ruby</a></li> 						 
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio1.html">HTML5</a></li>
+							<li><a href="./portfolio1_css.html">CSS</a></li>
+							<li><a href="./portfolio1_js.html">Javascript</a></li>
+							<li><a href="./portfolio1_xml.html">XML</a></li>
+							<li><a href="./portfolio1_ajax.html">AJAX</a></li>							   
+							<li><a href="./portfolio1_php.html">PHP</a></li>   
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio2.html">数据库基础</a></li>
+                                <li><a href="./portfolio2_oracle.html">Oracle</a></li>
+                                <li><a href="./portfolio2_mysql.html">Mysql</a></li>
+                                <li><a href="./portfolio2_sqlserver.html">Sql Server</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">HTML5</a></li>
-                                <li><a href="./portfolio.html">CSS</a></li>
-                                <li><a href="./portfolio.html">Javascript</a></li>
-                                <li><a href="./portfolio.html">XML</a></li>
-                                <li><a href="./portfolio.html">AJAX</a></li>
-                                <li><a href="./portfolio.html">JQuery</a></li>                               
-                                <li><a href="./portfolio.html">PHP</a></li>
-                                <li><a href="./portfolio.html">JSP</a></li>
-                                <li><a href="./portfolio.html">ASP.NET</a></li>
-                                <li><a href="./portfolio.html">Web Service</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio3.html">iOS开发</a></li>
+                                <li><a href="./portfolio3_android.html">Android开发</a></li>
+                                <li><a href="./portfolio3_wp.html">Windows Phone开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">数据库基础</a></li>
-                                <li><a href="./portfolio.html">Oracle</a></li>
-                                <li><a href="./portfolio.html">Mysql</a></li>
-                                <li><a href="./portfolio.html">Sql Server</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio4.html">Windows开发</a></li>
+                                <li><a href="./portfolio4_osx.html">Mac OS X开发</a></li>
+                                <li><a href="./portfolio4_linux.html">Linux开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">iOS开发</a></li>
-                                <li><a href="./portfolio.html">Android开发</a></li>
-                                <li><a href="./portfolio.html">Windows Phone开发</a></li>                                
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">Windows</a></li>
-                                <li><a href="./portfolio.html">Mac OS X</a></li>
-                                <li><a href="./portfolio.html">Linux</a></li> 
-                                <li><a href="./portfolio.html">跨平台开发</a></li>
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li class="active">
-                            <a href="./blog.html">问答</a>                                                 
-                        </li>                        
-                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
-                    </ul>
-                    <div class="search-open">
-                        <div class="input-append">
-                            <form />
-                                <input type="text" class="span3" placeholder="Search" />
-                                <button type="submit" class="btn-u">Go</button>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- /nav-collapse -->                                
-            </div><!-- /navbar-inner -->
-        </div><!-- /navbar -->                          
-    </div><!-- /container -->               
-</div><!--/header -->      
+						<b class="caret-out"></b>                        
+						</li>
+						<li class="active">
+						<a href="./blog.html">问答</a>                                                 
+						</li>                        
+						<li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+					</ul>
+					<div class="search-open">
+						<div class="input-append">
+							<form />
+								<input type="text" class="span3" placeholder="Search" />
+								<button type="submit" class="btn-u">Go</button>
+							</form>
+						</div>
+					</div>
+				</div><!-- /nav-collapse -->                                
+			</div><!-- /navbar-inner -->
+		</div><!-- /navbar -->                          
+	</div><!-- /container -->               
+</div><!--/header -->         
 <!--=== End Header ===-->
 
 <!--=== Breadcrumbs ===-->
-<div class="breadcrumbs margin-bottom-40">
+<div class="breadcrumbs">
 	<div class="container">
         <h1 class="color-green pull-left">Portfolio Item</h1>
         <ul class="pull-right breadcrumb">
@@ -174,135 +166,30 @@
 <!--=== End Breadcrumbs ===-->
 
 <!--=== Content Part ===-->
-<div class="container portfolio-item"> 	
-	<div class="row-fluid margin-bottom-20"> 
-		<!-- Carousel -->
-        <div class="span7">
-            <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="assets/img/carousel/5.jpg" alt="" />
-                        <div class="carousel-caption">
-                            <h4>First Thumbnail label</h4>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/img/carousel/4.jpg" alt="" />
-                        <div class="carousel-caption">
-                            <h4>Second Thumbnail label</h4>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/img/carousel/3.jpg" alt="" />
-                        <div class="carousel-caption">
-                            <h4>Third Thumbnail label</h4>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-arrow">
-                    <a data-slide="prev" href="#myCarousel" class="left carousel-control"><i class="icon-angle-left"></i></a>
-                    <a data-slide="next" href="#myCarousel" class="right carousel-control"><i class="icon-angle-right"></i></a>
-                </div>
-            </div>
-        </div><!--/span7-->
-        <!-- //End Tabs and Carousel -->
-        
-        <div class="span5">
-        	<h3>视频简介</h3>
-            <p>At vero eos et accusamus et iusto odio dignissimos <a href="#">ducimus qui blanditiis</a> praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus.</p>
-            <p>Molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus.</p>
-            <ul class="unstyled">
-            	<li><i class="icon-user color-green"></i> Jack Baur</li>
-            	<li><i class="icon-calendar color-green"></i> 14,2003 February</li>
-            	<li><i class="icon-tags color-green"></i> Websites, Google, HTML5/CSS3</li>
-            </ul>
-            <p><a class="btn-u btn-u-large" href="#">VISIT THE PROJECT</a></p>
-        </div>
-    </div><!--/row-fluid-->
 
-	<!-- Recent Works -->
-    <div class="headline"><h3>相关视频</h3></div>
-    <div class="row-fluid margin-bottom-40">
-        <ul id="list" class="bxslider recent-work">
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/2.jpg" alt="" /></em>
-                    <span>
-                        <strong>Happy New Year</strong>
-                        <i>Anim pariatur cliche reprehenderit</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/9.jpg" alt="" /></em>
-                    <span>
-                        <strong>Award Winning Agency</strong>
-                        <i>Responsive Bootstrap Template</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/4.jpg" alt="" /></em>
-                    <span>
-                        <strong>Wolf Moon Officia</strong>
-                        <i>Pariatur prehe cliche reprehrit</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/5.jpg" alt="" /></em>
-                    <span>
-                        <strong>Food Truck Quinoa Nesciunt</strong>
-                        <i>Craft labore wes anderson cred</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/6.jpg" alt="" /></em>
-                    <span>
-                        <strong>Happy New Year</strong>
-                        <i>Anim pariatur cliche reprehenderit</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/7.jpg" alt="" /></em>
-                    <span>
-                        <strong>Award Winning Agency</strong>
-                        <i>Responsive Bootstrap Template</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/8.jpg" alt="" /></em>
-                    <span>
-                        <strong>Wolf Moon Officia</strong>
-                        <i>Pariatur prehe cliche reprehrit</i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                	<em class="overflow-hidden"><img src="assets/img/carousel/9.jpg" alt="" /></em>
-                    <span>
-                        <strong>Food Truck Quinoa Nesciunt</strong>
-                        <i>Craft labore wes anderson cred</i>
-                    </span>
-                </a>
-            </li>
-        </ul>        
-	</div><!--/row-->
-	<!-- //End Recent Works -->                
-</div><!--/container-->	 	
+<div>		
+	<div class="row-fluid">
+	<div class=" v_bg">
+	  <video style="padding-top:30px" id="nhplayer" controls preload="none" width="100%" height="500" poster="http://ninghao.net/files/screenshot/bootstrap-00-00.jpg">
+    		<source src="http://ninghao.net/system/files/video/bootstrap-00-00.mp4" type="video/mp4"/>
+  	  </video>
+         </div>
+	   <div style="padding-left:150px;padding-right:150px;padding-top:20px">
+            <h3>视频简介</h3>
+	    <ul class="styled">
+            	<li><i class="icon-user color-green"></i> 王皓</li>
+            	<li><i class="icon-calendar color-green"></i> 2014-05-16</li>
+            	<li><i class="icon-tags color-green"></i> Websites, Bootstrap, HTML5/CSS3</li>
+            </ul>
+            <p>Bootstrap是Twitter推出的一个开源的用于前端开发的工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，
+                它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。Bootstrap是基于jQuery框架开发的，它在jQuery框架的基础上进行了更为个性化和人性化的完善，形成一套自己独有的网站风格，并兼容大部分jQuery插件。 
+            Bootstrap中包含了丰富的Web组件，根据这些组件，可以快速的搭建一个漂亮、功能完备的网站。其中包括以下组件：
+下拉菜单、按钮组、按钮下拉菜单、导航、导航条、面包屑、分页、排版、缩略图、警告对话框、进度条、媒体对象等</p>            
+                     
+           </div>
+       </div><!--/row-fluid-->
+</div><!--/container-->	
+	
 <!--=== End Content Part ===-->
 
 <!--=== Footer ===-->
@@ -312,15 +199,15 @@
 			<div class="span4">
                 <!-- About -->
 		        <div class="headline"><h3>关于我们</h3></div>	
-				<p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>	
+				<p class="margin-bottom-25">微学是一个在线学习平台，主要提供IT技术的各难点讲解视频，用户可以在问答论坛中进行交流</p>	
 
 	            <!-- Monthly Newsletter -->
 		        <div class="headline"><h3>期刊订阅</h3></div>	
-				<p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+				<p>订阅我们的电子期刊，随时了解我们的最新动态和优惠信息！</p>
 				<form class="form-inline" />
 					<div class="input-append">
-						<input type="text" placeholder="Email Address" class="input-medium" />
-						<button class="btn-u">Subscribe</button>
+						<input type="text" placeholder="电子邮箱" class="input-medium" />
+						<button class="btn-u">订阅</button>
 					</div>
 				</form>							
 			</div><!--/span4-->	
@@ -331,19 +218,19 @@
                     <dl class="dl-horizontal">
                         <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Android 的提权 (Root) 原理是什么?</a></p> 
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                     <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Python与R不同，Python是一门多功能的语言。数据统计是更多是通过第三方包来实现的。</a></p> 
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                     <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Python 在数据分析工作中的地位与 R 语言、SAS、SPSS 比较如何？</a></p> 
                         </dd>
                     </dl>
                 </div>
@@ -353,11 +240,10 @@
 	            <!-- Monthly Newsletter -->
 		        <div class="headline"><h3>联系我们</h3></div>	
                 <address>
-					25, Lorem Lis Street, Orange <br />
-					California, US <br />
-					Phone: 800 123 3456 <br />
-					Fax: 800 123 3456 <br />
-					Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+					浙江省 杭州市 江干区<br />
+					六号大街新雁公寓14幢 <br />
+					联系电话: 400-12345678 <br />					
+					电子邮箱: <a href="mailto:info@anybiz.com" class="">info@weixue.com</a>
                 </address>
 
                 <!-- Stay Connected -->
@@ -374,8 +260,7 @@
 			</div><!--/span4-->
 		</div><!--/row-fluid-->	
 	</div><!--/container-->	
-</div><!--/footer-->	
-<!--=== End Footer ===-->
+</div><!--/footer-->
 
 <!--=== Copyright ===-->
 <div class="copyright">

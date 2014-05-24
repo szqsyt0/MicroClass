@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -29,16 +29,16 @@
 <div class="top">
     <div class="container">         
         <ul class="loginbar pull-right">           
-            <li><a href="page_login.html" class="login-btn">登录</a></li>  
-            <li class="devider">&nbsp;</li>                       
+             <li><a href="page_login.html" class="login-btn">登录</a> / <a href="page_registration.html" class="login-btn">注册</a></li>   
+            <li class="devider">&nbsp;</li>
             <li>
-                <a href="#" class="login-btn dropdown-toggle" data-toggle="dropdown">我的微学</a>
+                <a href="micro_study.html">我的微学</a>
                 
-                <ul class="dropdown-menu">
-                                <li><a href="#">我的收藏</a></li>
-                                <li><a href="#">我的笔记</a></li>
-                                <li><a href="#">我的问答</a></li>
-                                <li><a href="#">播放记录</a></li>                                
+                <ul class="nav-list">
+                                <li><a href="micro_study.html">我的收藏</a></li>
+                                <li><a href="micro_study1.html">我的笔记</a></li>
+                                <li><a href="micro_study2.html">我的问答</a></li>
+                                <li><a href="micro_study3.html">播放记录</a></li>                                
                                 <li><a href="#">退出</a></li>                                                              
                 </ul>
             </li>                
@@ -51,113 +51,105 @@
 
 <!--=== Header ===-->
 <div class="header">               
-    <div class="container"> 
-        <!-- Logo -->       
-        <div class="logo">                                             
-            <a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
-        </div><!-- /logo -->        
-                                    
-        <!-- Menu -->       
-        <div class="navbar">                                
-            <div class="navbar-inner">                                  
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a><!-- /nav-collapse -->                                  
-                <div class="nav-collapse collapse">                                     
-                    <ul class="nav top-2">
-                        <li>
-                            <a href="./index.html">首页</a>                            
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">C/C++</a></li>
-                                <li><a href="./portfolio.html">C#</a></li>
-                                <li><a href="./portfolio.html">Objective-C</a></li>
-                                <li><a href="./portfolio.html">Java</a></li>
-                                <li><a href="./portfolio.html">Linux Shell</a></li>
-                                <li><a href="./portfolio.html">Python</a></li>
-                                <li><a href="./portfolio.html">Ruby</a></li> 
-                                <li><a href="./portfolio.html">数据结构</a></li>  
+	<div class="container"> 
+		<!-- Logo -->       
+		<div class="logo">                                             
+			<a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" /></a>
+		</div><!-- /logo -->        
+
+		<!-- Menu -->       
+		<div class="navbar">                                
+			<div class="navbar-inner">                                  
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a><!-- /nav-collapse -->                                  
+				<div class="nav-collapse collapse">                                     
+					<ul class="nav top-2 loginbar1">
+						<li>
+						<a href="./index.html">首页</a>                            
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">编程基础
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio.html">C/C++</a></li>														
+							<li><a href="./portfolio_java.html">Java</a></li>
+							<li><a href="./portfolio_shell.html">Shell</a></li>
+							<li><a href="./portfolio_python.html">Python</a></li>
+							<li><a href="./portfolio_ruby.html">Ruby</a></li> 						 
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./portfolio1.html">HTML5</a></li>
+							<li><a href="./portfolio1_css.html">CSS</a></li>
+							<li><a href="./portfolio1_js.html">Javascript</a></li>
+							<li><a href="./portfolio1_xml.html">XML</a></li>
+							<li><a href="./portfolio1_ajax.html">AJAX</a></li>							   
+							<li><a href="./portfolio1_php.html">PHP</a></li>   
+						</ul>
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio2.html">数据库基础</a></li>
+                                <li><a href="./portfolio2_oracle.html">Oracle</a></li>
+                                <li><a href="./portfolio2_mysql.html">Mysql</a></li>
+                                <li><a href="./portfolio2_sqlserver.html">Sql Server</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Web开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">HTML5</a></li>
-                                <li><a href="./portfolio.html">CSS</a></li>
-                                <li><a href="./portfolio.html">Javascript</a></li>
-                                <li><a href="./portfolio.html">XML</a></li>
-                                <li><a href="./portfolio.html">AJAX</a></li>
-                                <li><a href="./portfolio.html">JQuery</a></li>                               
-                                <li><a href="./portfolio.html">PHP</a></li>
-                                <li><a href="./portfolio.html">JSP</a></li>
-                                <li><a href="./portfolio.html">ASP.NET</a></li>
-                                <li><a href="./portfolio.html">Web Service</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio3.html">iOS开发</a></li>
+                                <li><a href="./portfolio3_android.html">Android开发</a></li>
+                                <li><a href="./portfolio3_wp.html">Windows Phone开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown">数据库开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">数据库基础</a></li>
-                                <li><a href="./portfolio.html">Oracle</a></li>
-                                <li><a href="./portfolio.html">Mysql</a></li>
-                                <li><a href="./portfolio.html">Sql Server</a></li>                                
+						<b class="caret-out"></b>                        
+						</li>
+						<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
+							<b class="caret"></b>                            
+						</a>
+						<ul class="dropdown-menu">
+                                <li><a href="./portfolio4.html">Windows开发</a></li>
+                                <li><a href="./portfolio4_osx.html">Mac OS X开发</a></li>
+                                <li><a href="./portfolio4_linux.html">Linux开发</a></li>                                
                             </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">移动端开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">iOS开发</a></li>
-                                <li><a href="./portfolio.html">Android开发</a></li>
-                                <li><a href="./portfolio.html">Windows Phone开发</a></li>                                
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">桌面应用开发
-                                <b class="caret"></b>                            
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./portfolio.html">Windows</a></li>
-                                <li><a href="./portfolio.html">Mac OS X</a></li>
-                                <li><a href="./portfolio.html">Linux</a></li> 
-                                <li><a href="./portfolio.html">跨平台开发</a></li>
-                            </ul>
-                            <b class="caret-out"></b>                        
-                        </li>
-                        <li class="active">
-                            <a href="./blog.html">问答</a>                                                 
-                        </li>                        
-                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
-                    </ul>
-                    <div class="search-open">
-                        <div class="input-append">
-                            <form />
-                                <input type="text" class="span3" placeholder="Search" />
-                                <button type="submit" class="btn-u">Go</button>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- /nav-collapse -->                                
-            </div><!-- /navbar-inner -->
-        </div><!-- /navbar -->                          
-    </div><!-- /container -->               
-</div><!--/header -->      
+						<b class="caret-out"></b>                        
+						</li>
+						<li class="active">
+						<a href="./blog.html">问答</a>                                                 
+						</li>                        
+						<li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+					</ul>
+					<div class="search-open">
+						<div class="input-append">
+							<form />
+								<input type="text" class="span3" placeholder="Search" />
+								<button type="submit" class="btn-u">Go</button>
+							</form>
+						</div>
+					</div>
+				</div><!-- /nav-collapse -->                                
+			</div><!-- /navbar-inner -->
+		</div><!-- /navbar -->                          
+	</div><!-- /container -->               
+</div><!--/header -->         
 <!--=== End Header ===-->
 
 <!--=== Breadcrumbs ===-->
@@ -165,9 +157,8 @@
 	<div class="container">
         <h1 class="color-green pull-left">用户指南</h1>
         <ul class="pull-right breadcrumb">
-            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-            <li><a href="">Pages</a> <span class="divider">/</span></li>
-            <li class="active">FAQs</li>
+            <li><a href="./index.html">首页</a> <span class="divider">/</span></li>
+            <li class="active">帮助</li>
         </ul>
     </div><!--/container-->
 </div><!--/breadcrumbs-->
@@ -184,102 +175,102 @@
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                      Anim pariatur cliche reprehenderit bird on it squid single-origin
+                      怎样使用电脑录制一个优秀的微视频
                     </a>
                   </div>
                   <div id="collapseOne" class="accordion-body in collapse" style="height: auto;">
                     <div class="accordion-inner">
-                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                        <p>1.选择合适的功能录制电脑视频<br/>2.设置要保存的视频格式和进行同步录音设置<br/>3.选择录像区域<br/>4.开始录制电脑视频<br/>5.保存视频，上传到微学网</p>
                     </div>
                   </div>
                 </div><!--/accordion-group-->
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                      Nihil anim keffiyeh helvetica accusamus labore sustainable VHS
+                      没有账号可以在微学网上传视频吗？
                     </a>
                   </div>
                   <div id="collapseTwo" class="accordion-body collapse" style="height: 0px;">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        亲，上传视频必须要在微学网注册账号并登录才可以哦，<a href="./page_registration.html">点击这里</a>进行注册，开始你的微学之旅吧！
                     </div>
                   </div>
                 </div><!--/accordion-group-->
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                      Brunch 3 wolf moon tempor enim eiusmod high life
+                      微学网是一个怎样的网站，目标用户是哪些呢？
                     </a>
                   </div>
                   <div id="collapseThree" class="accordion-body collapse" style="height: 0px;">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      微学网一个在线学习平台，用户可以上传自己录制的微视频到微学网，要求视频的内容为对某种IT技术中的难点的详细讲解，并且视频长度不能超过15分钟。微学网对视频的质量要求很高，只有通过我们审核的视频才能够显示到网站上。微学的目标用户群是对IT技术有浓厚兴趣的朋友，包括在校学生与已经工作的IT人士。微学网会以搭建一个优秀的学习平台为目标不断努力。
                     </div>
                   </div>
                 </div><!--/accordion-group-->
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                      Labore wes anderson cred labore wes anderson cred nesciunt 
+                      微学网对用户上传的视频有什么要求呢？
                     </a>
                   </div>
                   <div id="collapseFour" class="accordion-body collapse" style="height: 0px;">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      用户可以上传自己录制的微视频到微学网，要求视频的内容为对某种IT技术中的难点的详细讲解，视频质量高，并且视频长度不能超过15分钟。只有通过我们审核的视频才能够显示到网站上。
                     </div>
                   </div>
                 </div><!--/accordion-group-->
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-                      Brunch 3 wolf moon tempor sunt aliqua put a bird 
+                      播放视频的时候不流畅或者提示找不到该视频该怎么办？
                     </a>
                   </div>
                   <div id="collapseFive" class="accordion-body collapse" style="height: 0px;">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      在网站量访问量高的时候服务器压力较大，可能会造成视频播放不流畅，我们会不遗余力的为提高用户体验而奋斗。如果视频未找到，请反馈给我们！
                     </div>
                   </div>
                 </div><!--/accordion-group-->
             </div><!--/accardion-->
 
 			<!-- General Questions -->
-            <div class="headline"><h3>Other Questions</h3></div>
+            <div class="headline"><h3>其他问题</h3></div>
             <!-- Accardion -->
             <div class="accordion acc-home" id="accordion3">
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne1">
-                      1. Laim pariatur cliche reprehenderit
+                      1. 在问答回答问题有什么要求？
                     </a>
                   </div>
                   <div id="collapseOne1" class="accordion-body in collapse" style="height: auto;">
                     <div class="accordion-inner">
-                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                      <p>每个人都可以在问答回答问题，我们希望您能够认真的帮助他人，认真回答每一个问题。</p>
                     </div>
                   </div>
                 </div><!--/accordion-group-->
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo1">
-                      2. Nihil anim keffiyeh helvetica
+                      2. 分享视频可以获得报酬吗？
                     </a>
                   </div>
                   <div id="collapseTwo1" class="accordion-body collapse" style="height: 0px;">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      目前还不可以，但是相关计划已经在进行中，视频分享计划很快就会与大家见面。
                     </div>
                   </div>
                 </div><!--/accordion-group-->
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree1">
-                      3. Brunch 3 wolf moon tempor
+                      3. 可以在问答中与他人即时聊天吗？
                     </a>
                   </div>
                   <div id="collapseThree1" class="accordion-body collapse" style="height: 0px;">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      客官别急，即时通讯模块正在开发中，很快就会与大家见面哦！
                     </div>
                   </div>
                 </div><!--/accordion-group-->
@@ -288,29 +279,21 @@
         
 		<div class="span3">
         	<!-- Contacts -->
-            <div class="headline"><h3>Contacts</h3></div>
+            <div class="headline"><h3>联系我们</h3></div>
             <ul class="unstyled who margin-bottom-20">
-                <li><a href="#"><i class="icon-home"></i>5B Streat, City 50987 New Town US</a></li>
-                <li><a href="#"><i class="icon-envelope-alt"></i>info@example.com</a></li>
-                <li><a href="#"><i class="icon-phone-sign"></i>1(222) 5x86 x97x</a></li>
-                <li><a href="#"><i class="icon-globe"></i>http://www.example.com</a></li>
-            </ul>
-
-        	<!-- Business Hours -->
-            <div class="headline"><h3>Business Hours</h3></div>
-            <ul class="unstyled">
-            	<li><strong>Monday-Friday:</strong> 10am to 8pm</li>
-            	<li><strong>Saturday:</strong> 11am to 3pm</li>
-            	<li><strong>Sunday:</strong> Closed</li>
-            </ul>
+                <li><a href="#"><i class="icon-home"></i>浙江省杭州市江干区六号大街215号</a></li>
+                <li><a href="#"><i class="icon-envelope-alt"></i>info@weixue.com</a></li>
+                <li><a href="#"><i class="icon-phone-sign"></i>400-12345678</a></li>
+                <li><a href="#"><i class="icon-globe"></i>http://www.weixue.com</a></li>
+            </ul>        	
 
         	<!-- Why we are? -->
-            <div class="headline"><h3>Why we are?</h3></div>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+            <div class="headline"><h3>为什么创办微学网?</h3></div>
+            <p>目前的学习视频大多都拖沓冗长，难以找到重点，只是一味讲解知识点，但对难点却语焉不详，缺乏针对某个难点讲解进行分析的视频学习平台，因此我们创办了微学网</p>
             <ul class="unstyled">
-            	<li><i class="icon-ok color-green"></i> Odio dignissimos ducimus</li>
-            	<li><i class="icon-ok color-green"></i> Blanditiis praesentium volup</li>
-            	<li><i class="icon-ok color-green"></i> Eos et accusamus</li>
+            	<li><i class="icon-ok color-green"></i> 抓住重点，掌握难点</li>
+            	<li><i class="icon-ok color-green"></i> 分享知识，获得成就感</li>
+            	<li><i class="icon-ok color-green"></i> 与优秀的人交流</li>
             </ul>
         </div><!--/span4-->            		
     </div><!--/row-fluid-->
@@ -324,15 +307,15 @@
 			<div class="span4">
                 <!-- About -->
 		        <div class="headline"><h3>关于我们</h3></div>	
-				<p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>	
+				<p class="margin-bottom-25">微学是一个在线学习平台，主要提供IT技术的各难点讲解视频，用户可以在问答论坛中进行交流</p>	
 
 	            <!-- Monthly Newsletter -->
 		        <div class="headline"><h3>期刊订阅</h3></div>	
-				<p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+				<p>订阅我们的电子期刊，随时了解我们的最新动态和优惠信息！</p>
 				<form class="form-inline" />
 					<div class="input-append">
-						<input type="text" placeholder="Email Address" class="input-medium" />
-						<button class="btn-u">Subscribe</button>
+						<input type="text" placeholder="电子邮箱" class="input-medium" />
+						<button class="btn-u">订阅</button>
 					</div>
 				</form>							
 			</div><!--/span4-->	
@@ -343,19 +326,19 @@
                     <dl class="dl-horizontal">
                         <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Android 的提权 (Root) 原理是什么?</a></p> 
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                     <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Python与R不同，Python是一门多功能的语言。数据统计是更多是通过第三方包来实现的。</a></p> 
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                     <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
                         <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <p><a href="#">Python 在数据分析工作中的地位与 R 语言、SAS、SPSS 比较如何？</a></p> 
                         </dd>
                     </dl>
                 </div>
@@ -365,11 +348,10 @@
 	            <!-- Monthly Newsletter -->
 		        <div class="headline"><h3>联系我们</h3></div>	
                 <address>
-					25, Lorem Lis Street, Orange <br />
-					California, US <br />
-					Phone: 800 123 3456 <br />
-					Fax: 800 123 3456 <br />
-					Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+					浙江省 杭州市 江干区<br />
+					六号大街新雁公寓14幢 <br />
+					联系电话: 400-12345678 <br />					
+					电子邮箱: <a href="mailto:info@anybiz.com" class="">info@weixue.com</a>
                 </address>
 
                 <!-- Stay Connected -->

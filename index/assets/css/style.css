@@ -1,5 +1,9 @@
-/* 
+/*   
+Template Name: Unify - Responsive Bootstrap Template
 Description: Business, Corporate, Portfolio and Blog Theme.
+Version: 1.2
+Author: Html Stream
+Website: http://htmlstream.com/preview/unify
 */
 
 /*Import Google Fonts*/
@@ -1720,7 +1724,7 @@ a.btn-u-large {
 
 /*Glyphicons*/
 .glyphicons-demo {
-    
+    text-align: ;
 }
 
 .glyphicons-demo .glyphicons {
@@ -1851,3 +1855,223 @@ i.style-switcher-btn-option:hover {
 	padding: 7px;
 	text-shadow: none !important;
 }
+
+
+/*m-main*/
+.m-main{
+	display: block;
+	border:1px solid #fafafa;
+	width:190px;	
+	}
+	
+.m-main h2 {
+	display: block;
+	width: 175px;
+	height: 41px;
+	line-height: 42px;
+	color: #333;
+	font-size: 20px;
+	padding-left: 15px;
+	background-color: #F0F0F0;
+	margin-top:0;
+	margin-bottom:0;
+	font-family: "Arial","Hiragino Sans GB","Microsoft YaHei", 微软雅黑e\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+	}
+	
+.m-main ul{
+	display: block;
+	list-style:none;
+	margin:0;
+	}
+		
+.m-main ul li{	
+	font-size:16px;
+	height: 42px;
+	width: 190px;	
+	text-align: -webkit-match-parent;
+	}
+	
+.m-main ul li a{
+	text-decoration:none;
+	margin-bottom:50px;	
+	}
+	
+	
+.m-coll:hover,.m-note:hover,.m-ques:hover,.m-take:hover{
+	background:#fafafa;
+	}
+	
+.m-title::after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.m-coll i,.m-note i,.m-ques i,.m-take i{
+	padding-left:15px;
+	padding-top:10px;	
+	}
+
+/*m-main1*/
+	
+.m-main1{
+	height: 30px;
+	width: 100%;
+	border-bottom: 1px solid #29754D;
+	}
+	
+.m-main1 ul{
+	display: block;
+	list-style:none;
+	margin:0;	
+	}
+
+.m-main1 li b{
+	display: block;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	background: #EFEFEF;
+	cursor: pointer;
+	text-align: center;
+	width:100px;	
+	}
+
+.m-main1 li a{
+	display: block;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	background:#E6E6E6;
+	cursor: pointer;
+	text-align: center;
+	width:100px;	
+	text-decoration:none;	
+	}
+	
+.m-main1 li span{
+	display: block;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	background:#E6E6E6;
+	cursor: pointer;
+	text-align: center;	
+		}
+	
+.m-main1 li{
+	border-bottom:ipx solid #000;
+	border-width:100%;
+	}
+	
+.m-main1 li b.m-tabs {
+	color: white;
+	background: #29754D;
+	margin-bottom:1px;
+}
+
+.m-tab{	
+	background-color: #E6E6E6;
+	margin-bottom:20px;
+	height: 30px;
+	padding-top:5px;
+	}
+	
+.m-tab li {
+	float: left;
+	margin-right: 10px;
+	font-size: 12px;
+	text-decoration:none;
+}
+
+.m-tab li a.m-tabs1 {
+	color: #29754D;
+	}
+	
+.m-ta {
+	border:1px solid #ccc;
+	margin-top:20px;
+	margin-bottom:20px;
+	height:300px;
+	text-align:center
+	}
+
+/*m-main2*/
+
+.m-main2{
+	height: 30px;
+	width: 100%;
+	border-bottom: 1px solid #29754D;
+	}
+	
+.m-main2 ul{
+	display: block;
+	list-style:none;
+	margin:0;
+	height:30px;
+	}	
+	
+.m-main2 li{
+	border-bottom:ipx solid #000;
+	border-width:100%;
+	}
+	
+.m-main2 li a{
+	display: block;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	background: #EFEFEF;
+	cursor: pointer;
+	text-align: center;
+	width:100px;
+	text-decoration:none;
+	}
+
+.m-main2 li a {	
+	margin-bottom:1px;
+	background: #fff;
+	float: left;
+	}
+
+.m-main2 li a:hover{
+	background: #29754D;
+	color: white;
+	}
+	
+.m-ta2 {
+	border:1px solid #ccc;
+	margin-top:20px;
+	margin-bottom:20px;
+	height:300px;
+	text-align:center;
+	overflow:hidden; 
+	}
+
+.m-na{
+	*zoom:1
+	}
+.m-na:before,.m-na:after{
+	display:table;
+	line-height:0;
+	content:""
+	}
+.m-na:after{
+	clear:both
+	}
+.m-na>li>a:hover,.m-na>li>a:focus{
+	border-color:#eee #eee #ddd
+	}
+.m-na>.active>a,.m-na>.active>a:hover,.m-na>.active>a:focus{
+	color: white;
+	cursor:default;
+	background-color:#29754D;
+	}
+
+.v_bg{
+	background: #262A2D url(../img/v_bg.jpg) center bottom no-repeat;
+	width:100%;
+	height:550px;
+	}
